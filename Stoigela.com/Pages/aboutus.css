@@ -1,0 +1,66 @@
+.lists {
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.container {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
+
+.lists li {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.titlelines {
+    border: 10px;
+    border-bottom: 10px;
+}
+
+@media (max-width: 1200px) and (min-width: 300px) {
+    .container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .lists li {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+}

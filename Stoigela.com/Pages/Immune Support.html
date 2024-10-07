@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoilevium Topical</title>
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f0f0f0;
+            align-content: center;
+        }
+
+        @font-face {
+            font-family: 'Neuropol'; /* Name your font family */
+            src: url(../../Fonts/NEUROPOL.ttf); /* Locate the .ttf file within your directory*/
+        }
+        ul {
+            text-align: justify;
+        }
+
+        .container {
+            
+            margin-top: 40px;
+        }
+
+        .container h2, p, ul{
+            
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-image {
+            width: 100%;
+            width: 70%;
+            margin-left: 10%;
+            margin-bottom: 30px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .column li {
+                font-size: 20px;
+            }
+
+        .column h2, .column h1 {
+            font-family: "Space Grotesk", sans-serif;
+            line-height: 1.2;
+        }
+
+        .column p {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: justify;
+            font-size: 19px;
+        }
+
+        .table {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .table-item, .table-item-ingredient {
+            padding: 10px;
+            line-height: 1.5;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .table-item-ingredient {
+            border-left: 1px solid #ccc;
+        }
+
+        .second-page h2 {
+            margin: 10px 0;
+
+
+        }
+
+        .second-page p, .second-page ul {
+            margin: 0 0 20px 0;
+            font-size: 20px ;
+            text-align: justify;
+        }
+        .top-of-page-title {
+            width: 100%;
+            height: 300px;
+            background-image: linear-gradient(to right, #00AEEF, #0D6585 );
+            text-align: center;
+            color: white;
+            align-content: center;
+        }
+        .top-of-page-title h1{
+            line-height: 10px;
+            font-family: "Syne";
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .top-of-page-title h2{
+            font-family: "Neuropol";
+            margin-bottom: -20px;
+            padding-left: 80px;
+            font-size: 56px;
+            font-weight: 10;
+            letter-spacing: 5px;
+        }
+
+        h5 {
+            padding: 20px;
+        }
+
+        .footer h5 {padding: 0%;}
+        
+        @media (max-width: 1200px) {
+            .flex {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin-left: 2px;
+                margin-right: 2px;
+                margin-top: 20px;
+            }
+            
+            .second-page p, .second-page ul {
+                font-size: 16px;
+            }
+            
+            .column p {
+                font-size: 16px;
+            }
+            
+            .column li {
+                font-size: 16px;
+            }
+            .top-of-page-title h1{
+                font-size: 34px;
+                
+            }
+            .top-of-page-title h5{
+                font-size: 16px;
+            }
+            
+            .top-of-page-title h2{
+                font-size: 34px;
+
+            }
+        }
+    </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link " href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown d-flex align-items-center px-3">
+              <!-- Main part of the button that links to Products.html -->
+              <a class="nav-link" href="Products.html">
+                  Products
+              </a>
+              <!-- Dropdown toggle button (the arrow) -->
+              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item " href="Topical.html">Topical</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item active border-top border-bottom border-dark" href="./PureGut.html">PureGut</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
+              </ul>
+          </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="Research.html">Research</a>
+              </li>
+              <li class="nav-item px-3 ">
+                <a class="nav-link" href="References.html">References</a>
+              </li>
+  
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="top-of-page-title">
+        <h1>ZOILEVIUM</h1>
+        <h2>IMMUNE</h2>
+        <h2>SUPPORT</h2>
+        <h5>FOR IMPROVED GENERAL WELL-BEING</h5>
+    </div>
+    <div class="container">
+        <div class="flex">
+            <div class="column">
+                <img src="../../Images/Zoilevium Immune Support Logo.jpg" class="product-image column" alt="Zoilevium Topical">
+                <h2>Composition:</h2>
+                <p>Each dosage of 10 drops contains the following ingredients, all below RDA:</p>
+                <div class="table">
+                    <div class="table-item">Zinc (Zinc Citrate)</div>
+                    <div class="table-item-ingredient">≤ 4.99 mg
+                    </div>
+                    <div class="table-item">Magnesium (Magnesium Sulphate) </div>
+                    <div class="table-item-ingredient">≤ 0.14 mg</div>
+                    <div class="table-item">Copper (Copper Sulphate)</div>
+                    <div class="table-item-ingredient">≤ 1.10 mg</div>
+                </div>
+
+                <h2>Other ingredients</h2>
+                <div class="table">
+                    <div class="table-item">Potassium (Potassium Hydroxide)</div>
+                    <div class="table-item-ingredient">≤ 1.60 mg</div>
+                    <div class="table-item">Citric Acid
+                    </div>
+                    <div class="table-item-ingredient">≤ 3.54 g</div>
+                    <div class="table-item">Low Sodium (Sodium Bicarbonate)</div>
+                    <div class="table-item-ingredient">≤ 0.42 mg</div>
+                    <div class="table-item">Sulphates</div>
+                    <div class="table-item-ingredient">≤ 35.71 mg</div>
+                    <div class="table-item">Nitrates</div>
+                    <div class="table-item-ingredient">≤ 0.33 mg</div>
+                    <div class="table-item">Distilled water</div>
+                    <div class="table-item-ingredient"></div>
+                </div>
+
+                <p>No flavouring, colourant, preservatives, sugar or sweetener added.</p>
+                <p>​
+
+                    Zoilevium Immune Support has been tested for SANS 241
+                    compliance by Bureau Veritas and was found compliant.
+                    SANS 241 Drinking Water Specification states the
+                    minimum requirements for potable water to be
+                    considered safe for human consumption. These
+                    requirements include the microbiological, chemical and
+                    physical properties of the water.
+                </p>
+            </div>
+
+            <div class="column">
+                <h1 style="text-align: center;">Zoilevium Immune Support</h1>
+                <p>Zoilevium Immune Support assists the body in fortifying one's immune system. An optimized immune system is crucial for maintaining overall health, as it protects the body from infections, reduces the risk of chronic diseases, and ensures that the body's defences are strong enough to pre-emptively fight off illnesses effectively. Therefore, preventing illness, before curing illness, becomes necessary. A robust immune system helps in faster recovery, better resilience against stress, and overall improved well-being.</p>
+                <p>The modes of action Zoilevium Immune Support relies on to assist with strengthening the immune system, are found in the inherently acknowledged properties of the trace minerals it comprises, like:</p>
+                <ul>
+                    <li>
+                       <strong> Zinc:</strong> Helps strengthen the immune system, promotes digestive health, has antibacterial properties, contributes to normal cognitive function, contributes to normal DNA synthesis, helps with macronutrient metabolism, helps maintain normal testosterone levels in the blood, helps protect cells from oxidative stress, assists in the maintenance of good health.
+                    </li>
+                    <br/>
+                    <li>
+                        <strong>Magnesium:</strong> Has anti-inflammatory properties, contributes to tissue formation, contributes to normal energy-yielding metabolism, contributes to the normal functioning of the nervous system, helps with the reduction of tiredness and fatigue, helps maintain normal muscle function, contributes to normal psychological function, assists in the maintenance of good health.
+                    </li>
+                    <br/>
+                    <li>
+                        <strong>Copper: </strong>Has anti-inflammatory properties, promotes formation of red blood cells, has antibacterial properties, protects cells from damage and oxidative stress, contributes to normal energy-yielding metabolism, contributes to the normal function of the immune system, contributes to normal skin and hair pigmentation.
+                    </li>
+                    <br/>
+                    <li>
+                        <strong>Potassium: </strong> Contributes to normal function of the nervous system, contributes to normal muscle function, contributes to the maintenance of normal blood pressure.
+                    </li>
+                    <br/>
+                    <li>
+                        <strong>Citric acid:</strong> Assists in absorbing nutrients.
+                    </li>
+                </ul>
+                <p>​​
+                    All of these properties may contribute to promoting the reinforcement of the body’s natural immune system.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container second-page column">
+        <h2>What makes us unique?</h2>
+        <p>What gives Zoilevium Immune Support its beneficial synergistic qualities, are the unique mineral combinations, formulations and production processes, individually tailored for this product.</p>
+        <ul>
+            <li>A varied diet is the most effective and safe way to achieve good nutrition, health, body composition as well as mental and physical performance.</li>
+        </ul>
+        <h2>Indications:</h2>
+        <p>Zoilevium Immune Support is a combination of above-mentioned minerals with their respective advantages, which may assist in improved general health and well-being.</p>
+        <h2>Contra-indications:</h2>
+        <p>Zoilevium Immune Support is contra-indicated in persons who are hypersensitive or allergic to any of the ingredients.</p>
+        <h2>Warning:</h2>
+        <p>Zoilevium Immune Support is meant to be used as a supportive therapy to improve general health and well-being and is not intended to replace a healthy diet or eating habits. If you are pregnant and/or breast-feeding, please consult your medical practitioner first before starting use of this product.</p>
+        <p>Statements made, have not been evaluated by the US Food and Drug Administration or any medical control council. This product does not claim to diagnose, treat, cure or prevent any disease.</p>
+    </div>
+
+    <footer>
+        <div class="footer ">
+          <div class="footer-img">
+            <img  src="../../Images/Stoigela Logo.jpg" height="200px" width="150px" class="bi m-5" alt="Stoigela Logo">
+          </div>
+          <div>
+            <h4>Pages:</h4>
+            <a href="../../index.html">Home</a>
+            <a href="Research.html">Research</a>
+            <a href="Contact.html">Contact</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="PrivacyPolicy.html">Privacy Policy</a>
+          </div>
+          <div>
+            <h4>Product Pages:</h4>
+            <a href="Products.html">Products</a>
+            <a href="Topical.html">Topical</a>
+            <a href="PureGut.html">PureGut</a>
+            <a href="Immune Support.html">Immune Support</a>
+          </div>
+          <div>
+            <h4>Contact Us:</h4>
+            <h5>Send us an email:</h5>
+            <p>support@stoigela.com</p>
+            </br>
+            <h5>Our Address:</h5>
+            <p>Stoigela LLC</p>
+            <p>15 Melkbos Street</p>
+            <p>Grimbeekpark</p>
+            <p>South Africa</p>
+            <p>2531</p>
+          </div>
+        </div>
+        <div class="copyright-notice">
+          <p>© 2023 Stoigela</p>
+        </div>
+  
+      </footer>
+</body>
+</html>
