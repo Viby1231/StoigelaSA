@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+
+.all-testimonials{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .before-after {
+        display: flex;
+        gap: 1.5rem;
+        }
+
+        .before{
+            justify-content: space-between;
+        }
+        
+        .section {
+        width: 100%;
+        } 
+
+        .section h2 {
+            font-size: 1.25rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .section p {
+            color: #555;
+        }
+
+        .case-study{
+            text-align: center;
+            line-height: 20%;
+            width: 70%;
+            height: 150px;
+            background-image: linear-gradient(to right, #c5161c, #0D6585);
+            color: antiquewhite;
+            align-content: center;
+
+            border-radius: 20px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+        
+        .case-study-puregut {
+            text-align: center;
+            line-height: 20%;
+            width: 70%;
+            background-image: linear-gradient(to right, #329542, #0D6585 );
+            color: antiquewhite;
+            align-content: center;
+            border-left: solid 1px;
+        }
+
+        .case-study-general {
+            text-align: center;
+            line-height: 20%;
+            width: 70%;
+            background-image: linear-gradient(to right, #00AEEF, #0D6585 );
+            color: antiquewhite;
+            align-content: center;
+            border-left: solid 1px;
+        }
+
+        .case-study h4 {
+        margin: 0;
+        }
+
+        .case-study h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+        }
+
+        .case-study h3 {
+        font-size: 1rem;
+        color: white;
+        }
+
+            .content-warning {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: opacity 0.3s ease; 
+        z-index: 2;
+    }
+
+            .content-warning:hover {
+            opacity: 0;
+        }
+        .content-warning-container {
+        position: relative;
+        background: #f5f5f5;
+        border-radius: 8px;
+        overflow: hidden;
+        }
+
+            .content-warning p {
+            margin: 0px;
+            color: white
+        }
+        
+        .description 
+        {
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: azure;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            border: solid 1px;
+            border-color: grey;
+        }
+        .description-text{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .dropdown-menu  h5{
+            padding: 15px;
+        }
+
+        .description-text h1{
+            margin-top: 0px;
+        }
+
+        .doctors-report{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .doctors-report img{
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        h2{
+            font-size: 25px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        h3{
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .header
+        {
+            text-align: center;
+            height: 200px;
+            align-content: center;
+            color: #327191;
+        }
+
+        .product-image {
+            border: solid;
+        }
+
+        .photo{
+            align-self: center;
+            text-align: center;
+            filter: blur(20px); /* Adjust blur amount */
+            width: 100%; /* Make the image responsive */
+            height: 100%;
+            transition: filter 0.3s ease-in-out;
+            align-content: center;
+            /* Smooth transition */
+        }
+
+
+
+            .photo img:hover {
+            transform: scale(1.05);
+            }
+
+            p {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            }
+
+            .photo.active {
+            filter: none; /* Remove blur when clicked */
+            }
+
+        .Testimonial{
+            padding: 50px;
+            background-color: rgb(255, 255, 255);
+            width: 90%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .testimonial-content {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .testimonial-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+        .user-info {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+        .top-of-page-title {
+                width: 100%;
+                background-image: linear-gradient(to right, #00AEEF, #0D6585);
+                text-align: left;
+                padding-left: 10%;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                padding :10px;
+                text-shadow: 1px 1px 10px black;
+            }
+
+        
+        .Testimonial-Topical{
+            display: flex;
+            justify-content: center;
+        } 
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user{
+            line-height: 0%;
+            display: flex;
+            flex-direction: row;
+            border-left: solid 1px;
+            border-top: solid 1px;
+            border-right: solid 1px;
+            border-color: grey;
+        }
+
+        .user-details h3 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+        .user-details p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+        .user-image {
+        margin-right: 20px;
+        
+    }
+
+    .user-image svg {
+    border-radius: 50%;
+    }
+
+    .user-image img{
+        border-radius: 10px;
+    }
+
+    @media (max-width: 1200px) and (min-width: 350px) {
+
+        .top-of-page-title {
+        flex-direction: column;
+        text-align: center;
+
+        }
+
+        .testimonial-header{
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            
+        }
+
+        .testimonial-content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-image{
+            margin: 0;
+        }
+
+        .case-study{
+            width: 100%;
+            margin: 0;
+        }
+        .content-warning-container {
+            display: flex;
+            align-self: center;
+            position:relative;
+
+
+
+
+        }
+
+        .user-info{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-image{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .user-details{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .testimonial-container{
+            width: 100%;
+
+        }
+
+        .section{
+            width: 70%;
+        }
+
+
+
+
+        .photo{
+
+            margin: auto;
+            max-width: 60%;
+            min-width: 250px;
+
+        }
+
+        .before-after{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+
+    }
+        
+
+    </style>
+</head>
+<body>
+    <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link " href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown d-flex align-items-center px-3">
+              <!-- Main part of the button that links to Products.html -->
+              <a class="nav-link" href="Products.html">
+                  Products
+              </a>
+              <!-- Dropdown toggle button (the arrow) -->
+              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Topical.html">Topical</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="PureGut.html">PureGut</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
+                  <h5>Testimonials</h5>
+                  <li><a class="dropdown-item" href="TestimonialsTopical.html">Topical Testimonials</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item active" href="TestimonialsImmuneSupport.html">Immune Support Testimonials</a></li>
+              </ul>
+          </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="Research.html">Research</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="References.html">References</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div>
+
+        <div>
+            <div class="top-of-page-title">
+                <div class="product-image">
+                    <img src="/Images/Zoilevium Immune Support Logo.jpg" width="250px">
+                </div>
+                <div class="top-of-page-description">
+                    <h1>ZOILEVIUM</h1>
+                    <h2>Immune Support</h2>
+                    <h5>Assistance with other ailments & enhance general well-being</h5>
+                    <h5>TESTIMONIALS</h5>
+                    <h5></h5>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+<div class="background">
+    <div class="all-testimonials">
+
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </div>
+                        <div class="user-details">
+                            <h3>Linda Dugmore</h3>
+                            <p>75 years old</p>
+                            <p>Pretoria, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="case-study-general case-study">
+                        <h4>STOIGELA (PTY) LTD</h4>
+                        <h2>Zoilevium for General Well-Being</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="testimonial-content">
+                    <div class="before-after">
+                        <div class="section before">
+                            <p>I am an elderly lady of 75 who was feeling 120 years old.</p>
+                            <p> I suffered from digestive problems, chronic pain in my hands and wrists from arthritis, as well as over-all aches and pains due to fibromyalgia. I was permanently tired, to the extent that most days I could hardly get out of bed.</p>
+                            <p>I was told about how wonderful the Zoilevium Immune Support product was from a nephew overseas. </p>
+                            <p>He in turn had seen excellent health results in a friend who had been battling with digestive trouble. </p>
+                            <p>I ordered the product and I have had amazing results with all my problems. </p>
+                            <p>My chronic pain has very significantly reduced. My energy levels have also significantly increased. To the extent that I have started working around the house and in my garden again. </p>
+                            <p>I now regard the product as part of my daily, necessary, routine. Thank you Zoilevium!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-image">
+                            <img src="/Images/Sarah.png" height="110px" width="100px">
+                        </div>
+                        <div class="user-details">
+                            <h3>Sarah Motsemm</h3>
+                            <p>42 years old</p>
+                            <p>Potchefstroom, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="case-study-general case-study">
+                        <h4>STOIGELA (PTY) LTD</h4>
+                        <h2>Zoilevium for General Well-Being</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="testimonial-content">
+                    <div class="before-after">
+                        <div class="section before">
+
+                                <p>I used to suffer from chronic headaches. I was on permanent pain medication. This overuse of medication started to cause kidney problems and kidney pain.</p>
+                                <p>My employer was used to me asking for pain medication in addition to the self medication I was on.</p>
+                                <p>A client of ours introduced me to Zoilevium Immune Support and out of pure desperation I decided to try the product.</p>
+                                <p>I started to experience results after about 3 weeks of use.</p>
+                                <p>I am now totally headache free. This has had the knock-on effect of stopping my kidney pain and problems as I no longer use pain medicine. </p>
+                                <p>I use Zoilevium Immune Support on a permanent basis now and have put my family on the product as well.</p>
+                                <p>Thank you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </div>
+                        <div class="user-details">
+                            <h3>Anonymous male</h3>
+                            <p>56 years old</p>
+                            <p>London, United Kingdom</p>
+                        </div>
+                    </div>
+                    <div class="case-study-general case-study">
+                        <h4>STOIGELA (PTY) LTD</h4>
+                        <h2>Zoilevium for General Well-Being</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="testimonial-content">
+                    <div class="before-after">
+                        <div class="section before">
+                            <ul>
+
+                                <li>After receiving the Covid-19 vaccine, the person’s health deteriorated dramatically. </li>
+                                <li>Was given chemo-therapy for approximately 6-months, followed by dialysis for 6- months. </li>
+                                <li>He was bed ridden for around a year before intervention. </li>
+                                <li>Family and friends regarded his situation as extremely dire.</li>
+                                <li>After using Zoilevium Immune Support for 3 weeks the person made a full recovery. </li>
+                                <li>He was able to get up out of bed and walk and move normally again.</li>
+                                <li>His general health returned to normal.</li>
+                                <li>He was able to resume normal activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-image">
+                            <img src="/Images/Kobus.png" height="110px" width="100px">
+                        </div>
+                        <div class="user-details">
+                            <h3>Kobus Grobler</h3>
+                            <p>56 years old</p>
+                            <p>Parys, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="case-study-general case-study">
+                        <h4>STOIGELA (PTY) LTD</h4>
+                        <h2>Zoilevium for General Well-Being</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="testimonial-content">
+                    <div class="before-after">
+                        <div class="section before">
+                                <li>The person experienced numbness in his left arm, hand and fingers.</li>
+                                <li>He lost feeling in some fingers and experienced pins and needles sensation in other fingers and parts of his hand.</li>
+                                <li>After using Zoilevium Immune Support for 3 weeks the person made a full recovery. </li>
+                                <li>The numbness and pins and needles sensation had disappeared.</li>
+                                <li>He also had feeling back in his arm, hand and fingers.</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="../ContentWarning.js"></script>
+</body>
+<footer>
+    <div class="footer ">
+      <div class="footer-img">
+        <img  src="../../Images/Stoigela Logo.jpg" height="200px" width="150px" class="bi m-5" alt="Stoigela Logo">
+      </div>
+      <div>
+        <h4>Pages:</h4>
+        <a href="index.html">Home</a>
+        <a href="./Stoigela.com/Pages/Research.html">Research</a>
+        <a href="./Stoigela.com/Pages/Contact.html">Contact</a>
+        <a href="./Stoigela.com/Pages/AboutUs.html">About Us</a>
+        <a href="./Stoigela.com/Pages/PrivacyPolicy.html">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Product Pages:</h4>
+        <a href="./Stoigela.com/Pages/Products.html">Products</a>
+        <a href="./Stoigela.com/Pages/Topical.html">Topical</a>
+        <a href="./Stoigela.com/Pages/PureGut.html">PureGut</a>
+        <a href="./Stoigela.com/Pages/Immune Support.html">Immune Support</a>
+      </div>
+      <div>
+        <h4>Testimonials:</h4>
+        <a href="TestimonialsTopical.html">Topical</a>
+        <a href="TestimonialsPureGut.html">PureGut</a>
+        <a href="TestimonialsImmuneSupport.html">Immune Support</a>
+      </div>
+      <div>
+        <h4>Contact Us:</h4>
+        <h5>Send us an email:</h5>
+        <p>support@stoigela.co.za</p>
+        </br>
+        <h5>Our Address:</h5>
+        <p>Stoigela (Pty) Ltd</p>
+        <p>15 Melkbos Street</p>
+        <p>Grimbeekpark</p>
+        <p>South Africa</p>
+        <p>2531</p>
+      </div>
+    </div>
+    <div class="copyright-notice">
+      <p>© 2023 Stoigela</p>
+    </div>
+
+  </footer>
+</html>
