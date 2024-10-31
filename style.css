@@ -194,6 +194,10 @@ h2.animate {
     
 }
 
+.dropdown-menu  h5{
+    padding: 15px;
+}
+
 
 .titlesize {
     font-weight: 100;
