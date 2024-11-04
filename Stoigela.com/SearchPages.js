@@ -1,9 +1,9 @@
 
 // Array of content on your website
 const websiteContent = [
-  { title: "Home", url: "/", description: "Welcome to the homepage of our website." },
-  { title: "Home: How can minerals keep us healthy?", url: "/#Home1", description: "" },
-  { title: "Home: Are all mineral supplements created equal?", url: "/#Home2", description: "" },
+  { title: "Home", url: "../../index.html", description: "Welcome to the homepage of our website." },
+  { title: "Home: How can minerals keep us healthy?", url: "../../index.html#Home1", description: "" },
+  { title: "Home: Are all mineral supplements created equal?", url: "../../index.html#Home2", description: "" },
 
   { title: "About Us", url: "AboutUs.html", description: "Learn more about our team and mission." },
   { title: "About Us: Our goal", url: "AboutUs.html#About1", description: "Learn more about our team's goal." },
