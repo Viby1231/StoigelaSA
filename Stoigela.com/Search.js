@@ -19,7 +19,7 @@ const websiteContent = [
   { title: "Immune Support", url: "/Stoigela.com/Pages/Immune Support.html", description: "Find out more about Zoilevium Immune Support" },
   { title: "PureGut", url: "/Stoigela.com/Pages/PureGut.html", description: "Find out more about Zoilevium PureGut" },
   { title: "References", url: "/Stoigela.com/Pages/References.html", description: "" },
-  { title: "Testimonials", url: "TestimonialsTopical.html", description: "" }
+  { title: "Testimonials", url: "/Stoigela.com/Pages/TestimonialsTopical.html", description: "" }
 ];
 
 function searchWebsite() {
