@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoilevium Topical</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="Footer.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -18,24 +21,107 @@
         }
 
         @font-face {
-            font-family: 'Neuropol'; /* Name your font family */
-            src: url(/Fonts/NEUROPOL.ttf); /* Locate the .ttf file within your directory*/
+            font-family: 'Neuropol';
+            /* Name your font family */
+            src: url(/Fonts/NEUROPOL.ttf);
+            /* Locate the .ttf file within your directory*/
         }
+
         ul {
             text-align: justify;
         }
 
-        .dropdown-menu  h5{
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            display: flex;
+        }
+
+        .dropbtn {
+            background-color: white;
+            /* Green */
+            margin-left: 17px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            width: 90%;
+            text-align: left;
+            padding: 20px;
+            padding-left: 0;
+            font-weight: 500;
+            transition: font-size 0.6s ease,
+                font-weight 0.1s ease-in-out,
+                transform 0.1s ease;
+
+        }
+
+        .dropbtn.active {
+            transform: translate(10px, 10px);
+            font-size: 24px;
+
+
+        }
+
+
+
+
+        .arrow {
+            cursor: pointer;
+            font-size: 16px;
+            margin: auto;
+            transition: transform 0.2s linear;
+        }
+
+        .arrow.rotate {
+            transform: rotate(180deg);
+        }
+
+
+
+        .dropdown-content {
+            max-height: 0;
+            /* Start with height 0 */
+            margin: auto;
+            padding: 0 10px;
+            /* Padding for the content */
+
+            border-bottom: solid 1px;
+            border-color: rgb(182, 182, 182);
+
+
+
+            overflow: hidden;
+            /* Hide overflow */
+            transition: max-height 0.1s ease-in, padding 0.1s ease-out;
+            /* Smooth transition */
+        }
+
+        .dropdown-content.show {
+            max-height: 1000px;
+            /* Set a maximum height for the content */
+            padding: 10px;
+            /* Padding for the expanded content */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            /* Light gray on hover */
+        }
+
+        .dropdown-menu h5 {
             padding: 15px;
         }
 
         .container {
-            
+
             margin-top: 40px;
+
         }
 
-        .container h2, p, ul{
-            
+        .container h2,
+        p,
+        ul {
+
             padding-left: 20px;
             padding-right: 20px;
         }
@@ -58,22 +144,24 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
         }
 
         .column li {
-                font-size: 20px;
-            }
+            font-size: 16px;
+        }
 
-        .column h2, .column h1 {
+        .column h2,
+        .column h1 {
             font-family: "Space Grotesk", sans-serif;
             line-height: 1.2;
         }
 
         .column p {
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 16px;
             text-align: justify;
-            font-size: 19px;
+
         }
 
         .table {
@@ -84,14 +172,22 @@
             overflow: hidden;
         }
 
-        .table-item, .table-item-ingredient {
+        .table-item,
+        .table-item-ingredient {
             padding: 10px;
             line-height: 1.5;
             border-bottom: 1px solid #ccc;
         }
 
         .table-item-ingredient {
-            border-left: 1px solid #ccc;
+            border-left: 1px solid #f1f1f1;
+        }
+
+        .second-page{
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 100px;
+            border-radius: 0;
+            width: 100%;
         }
 
         .second-page h2 {
@@ -100,20 +196,23 @@
 
         }
 
-        .second-page p, .second-page ul {
+        .second-page p,
+        .second-page ul {
             margin: 0 0 20px 0;
-            font-size: 20px ;
+            font-size: 20px;
             text-align: justify;
         }
+
         .top-of-page-title {
             width: 100%;
             height: 300px;
-            background-image: linear-gradient(to right, #329542, #0D6585 );
+            background-image: linear-gradient(to right, #329542, #0D6585);
             text-align: center;
             color: white;
             align-content: center;
         }
-        .top-of-page-title h1{
+
+        .top-of-page-title h1 {
             line-height: 10px;
             font-family: "Syne";
             font-size: 56px;
@@ -121,7 +220,7 @@
             letter-spacing: 2px;
         }
 
-        .top-of-page-title h2{
+        .top-of-page-title h2 {
             font-family: "Neuropol";
             padding-left: 80px;
             font-size: 56px;
@@ -129,48 +228,55 @@
             letter-spacing: 5px;
         }
 
-        
+
         @media (max-width: 1200px) {
             .flex {
                 flex-direction: column;
             }
-            
+
             .container {
                 margin-left: 2px;
                 margin-right: 2px;
                 margin-top: 20px;
             }
-            
-            .second-page p, .second-page ul {
+
+            .second-page p,
+            .second-page ul {
                 font-size: 16px;
             }
-            
+
             .column p {
                 font-size: 16px;
             }
-            
+
             .column li {
                 font-size: 16px;
             }
-            .top-of-page-title h1{
+
+            .top-of-page-title h1 {
                 font-size: 34px;
-                
+
             }
-            .top-of-page-title h5{
+
+            .top-of-page-title h5 {
                 font-size: 16px;
             }
-            
-            .top-of-page-title h2{
+
+            .top-of-page-title h2 {
                 font-size: 34px;
 
             }
         }
     </style>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-                  <!--
+    <!--
             IBD
             Crohn
             pregnant
@@ -179,57 +285,71 @@
 
     <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-      <div class="container-fluid">
-        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
-            <li class="nav-item px-3">
-              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="AboutUs.html">About Us</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="Contact.html">Contact</a>
-            </li>
-            <li class="nav-item dropdown d-flex align-items-center px-3">
-              <!-- Main part of the button that links to Products.html -->
-              <a class="nav-link" href="Products.html">
-                  Products
-              </a>
-              <!-- Dropdown toggle button (the arrow) -->
-              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="visually-hidden">Toggle Dropdown</span>
-              </a>
-              <!-- Dropdown menu -->
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item " href="Topical.html">Topical</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item active border-top border-bottom border-dark" href="./PureGut.html">PureGut</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
-                  <h5>Testimonials</h5>
-                  <li><a class="dropdown-item" href="TestimonialsTopical.html">Topical Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsImmuneSupport.html">Immune Support Testimonials</a></li>
-              </ul>
-          </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="Research.html">Research</a>
-              </li>
-              <li class="nav-item px-3 ">
-                <a class="nav-link" href="References.html">References</a>
-              </li>
-  
-            
-          </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;"
+                    style="padding-right: 5px;">Stoigela</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
+                    <li class="nav-item px-3">
+                        <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link " href="AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center px-3">
+                        <!-- Main part of the button that links to Products.html -->
+                        <a class="nav-link" href="Products.html">
+                            Products
+                        </a>
+                        <!-- Dropdown toggle button (the arrow) -->
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item " href="Topical.html">Topical</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item active border-top border-bottom border-dark"
+                                    href="./PureGut.html">PureGut</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
+                            <h5>Testimonials</h5>
+                            <li><a class="dropdown-item" href="TestimonialsTopical.html">Topical Testimonials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="TestimonialsImmuneSupport.html">Immune Support
+                                    Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="Research.html">Research</a>
+                    </li>
+                    <li class="nav-item px-3 ">
+                        <a class="nav-link" href="References.html">References</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+
+
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <div class="top-of-page-title">
         <h1>ZOILEVIUM</h1>
@@ -241,57 +361,62 @@
             <div class="column">
                 <img src="../../Images/Zoilevium PureGut Logo.jpg" class="product-image column" alt="Zoilevium Topical">
                 <h2>Composition:</h2>
-                <p>The product contains the following ingredients:</p>
+                <p>Each dosage of 15 drops contains the following ingredients:</p>
                 <div class="table">
                     <div class="table-item">Zinc (Zinc Citrate)</div>
-                    <div class="table-item-ingredient">≤ 5.82 mg
+                    <div class="table-item-ingredient">5.82 mg
                     </div>
                     <div class="table-item">Magnesium (Magnesium Sulphate)</div>
-                    <div class="table-item-ingredient">≤ 0.16 mg</div>
+                    <div class="table-item-ingredient">0.16 mg</div>
                     <div class="table-item">Copper (Copper Sulphate)</div>
-                    <div class="table-item-ingredient">≤ 1.28 mg</div>
+                    <div class="table-item-ingredient">1.28 mg</div>
                     <div class="table-item">Potassium (Potassium Hydroxide)</div>
-                    <div class="table-item-ingredient">≤ 1.86 mg</div>
+                    <div class="table-item-ingredient">1.86 mg</div>
                 </div>
 
                 <h2>Other ingredients</h2>
                 <div class="table">
                     <div class="table-item">Citric Acid</div>
-                    <div class="table-item-ingredient">≤ 4.12 g</div>
+                    <div class="table-item-ingredient">4.12 g</div>
                     <div class="table-item">Low Sodium (Sodium Bicarbonate)
                     </div>
-                    <div class="table-item-ingredient">≤ 0.49 mg</div>
+                    <div class="table-item-ingredient">0.49 mg</div>
                     <div class="table-item">Sulphates </div>
-                    <div class="table-item-ingredient">≤ 41.62 mg</div>
+                    <div class="table-item-ingredient">41.62 mg</div>
                     <div class="table-item">Nitrates</div>
-                    <div class="table-item-ingredient">≤ 0.38 mg</div>
+                    <div class="table-item-ingredient">0.38 mg</div>
                     <div class="table-item">Distilled water</div>
                     <div class="table-item-ingredient"></div>
                 </div>
 
                 <p>No flavouring, colourant, preservatives, sugar or sweetener added.</p>
                 <p>​
-
-                    Zoilevium Puregut has been tested for SANS 241 compliance by Bureau Veritas and was found compliant. SANS 241 Drinking Water Specification states the minimum requirements for potable water to be considered safe for human consumption. These requirements include the microbiological, chemical and physical properties of the water.</p>
+                    Zoilevium Puregut has been tested for SANS 241 compliance by Bureau Veritas and was found compliant.
+                    SANS 241 Drinking Water Specification states the minimum requirements for potable water to be
+                    considered safe for human consumption. These requirements include the microbiological, chemical and
+                    physical properties of the water.</p>
             </div>
 
             <div class="column">
                 <h1 style="text-align: center;">Zoilevium PureGut</h1>
-                <p>Zoilevium PureGut is a mineral-based, inorganic, antimicrobial compound. The modes of action it
-                    relies on to assist with gut-related problems and conditions like IBS, are found in the
-                    inherently acknowledged properties of the trace 
-                    minerals it comprises, like:</p>
+                <p>Zoilevium PureGut is a mineral-based, inorganic, antimicrobial compound. The modes of action that it relies on, to assist with gut-related problems and conditions like IBS, are found in the inherently acknowledged properties of the trace minerals it comprises. The benefits of minerals, as supported by SAHPRA in South Africa:</p>
                 <ul>
                     <li>
-                       <strong>Copper:</strong> It has anti-inflammatory properties, promotes the formation of red blood cells, helps with the absorption of iron in the body, it has strong antibacterial properties, it protects cells from damage and helps to produce and repair connective tissue.
+                        <strong>Copper:</strong> It has anti-inflammatory properties, promotes the formation of red
+                        blood cells, helps with the absorption of iron in the body, it has strong antibacterial
+                        properties, it protects cells from damage and helps to produce and repair connective tissue.
                     </li>
-                    <br/>
+                    <br />
                     <li>
-                        <strong>Zinc:</strong> Supports the body’s immune function, it promotes digestive health, it has antibacterial properties, it helps to normalise macro-nutrient metabolism, it supports connective tissue formation, it also helps the body to metabolise carbohydrates, fats and proteins.
+                        <strong>Zinc:</strong> Supports the body’s immune function, it promotes digestive health, it has
+                        antibacterial properties, it helps to normalise macro-nutrient metabolism, it supports
+                        connective tissue formation, it also helps the body to metabolise carbohydrates, fats and
+                        proteins.
                     </li>
-                    <br/>
+                    <br />
                     <li>
-                        <strong>Magnesium:</strong> It has anti-inflammatory properties, it helps metabolise carbohydrates, fats and proteins and contributes to tissue formation.
+                        <strong>Magnesium:</strong> It has anti-inflammatory properties, it helps metabolise
+                        carbohydrates, fats and proteins and contributes to tissue formation.
                     </li>
                 </ul>
                 <p>​​
@@ -302,68 +427,110 @@
         </div>
     </div>
     <div class="container second-page column">
-        <div>
-            <h2>What makes us unique?</h2>
-            <p>What gives Zoilevium Puregut its beneficial synergistic qualities, are the unique mineral combinations, formulations and production processes, individually tailored for this product.</p>
+        <div class="dropdown">
+            <button id="dropbtn1" class="dropbtn"
+                onclick="toggleDropdown('dropdownContent1', 'dropbtn1', 'arrow1')">What makes us unique?</button>
+            <span id="arrow1" class="arrow" onclick="toggleDropdown('dropdownContent1', 'dropbtn1', 'arrow1')">▼</span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent1">
+            <p>What gives Zoilevium Puregut its beneficial synergistic qualities, are the unique mineral combinations,
+                formulations and production processes, individually tailored for this product.</p>
             <ul>
-                <li>A varied diet is the most effective and safe way to achieve good nutrition, health, body composition as well as mental and physical performance.</li>
+                <li>A varied diet is the most effective and safe way to achieve good nutrition, health, body composition
+                    as well as mental and physical performance.</li>
             </ul>
-            <h2>Indications:</h2>
-            <p>Zoilevium Puregut is a combination of above-mentioned minerals with their respective advantages, which may assist in alleviating the symptoms of IBS related conditions, as the properties listed above speak directly to the symptoms of these ailments.</p>
-            <h2>Contra-indications:</h2>
-            <p>Zoilevium Puregut is contra-indicated in persons who are hypersensitive or allergic to any of the ingredients.</p>
-            <h2>Warning:</h2>
-            <p>If you are taking other medication/-s for IBS, we do not advise that you stop the medication. Zoilevium Puregut is meant to be used as supportive therapy. Do not use when pregnant and/or breastfeeding.</p>
-                <p>This unregistered supplement has not been evaluated by SAHPRA for its quality, safety or intended use. This product does not claim to diagnose, treat, cure or prevent any disease.</p>
-            <h2>Directions for use:</h2>
-            <p>Adults: take 15 drops daily in a glass of water, or any other preferred safe, consumable drink. Do not drink undiluted. Dosage may be consumed in one sitting, or may be divided into any amount preferred, as long as 15 drops per day are consumed. Shake bottle gently before use. Always consult your health care practitioner, especially if you have underlying conditions and/or take other supplements or medication.</p>
+        </div>
+
+        <div class="dropdown">
+            <button id="dropbtn2" class="dropbtn"
+                onclick="toggleDropdown('dropdownContent2', 'dropbtn2', 'arrow2')">Indications:</button>
+            <span id="arrow2" class="arrow" onclick="toggleDropdown('dropdownContent2', 'dropbtn2', 'arrow2')">▼</span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent2">
+            <p>Zoilevium Puregut is a combination of above-mentioned minerals with their respective advantages, which may assist in alleviating the symptoms of IBS and improve general gut health related conditions, as the properties listed above speak directly to the symptoms of these ailments. What gives Zoilevium Puregut its beneficial synergistic qualities, are the unique mineral combinations, formulations and production processes, individually tailored for this product.</p>
+        </div>
+
+        <div class="dropdown">
+            <button id="dropbtn3" class="dropbtn"
+                onclick="toggleDropdown('dropdownContent3', 'dropbtn3', 'arrow3')">Contra-indications:</button>
+            <span id="arrow3" class="arrow" onclick="toggleDropdown('dropdownContent3', 'dropbtn3', 'arrow3')">▼</span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent3">
+            <p>Zoilevium Puregut is contra-indicated in persons who are hypersensitive or allergic to any of the
+                ingredients.</p>
+        </div>
+
+        <div class="dropdown">
+            <button id="dropbtn4" class="dropbtn"
+                onclick="toggleDropdown('dropdownContent4', 'dropbtn4', 'arrow4')">Warning:</button>
+            <span id="arrow4" class="arrow" onclick="toggleDropdown('dropdownContent4', 'dropbtn4', 'arrow4')">▼</span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent4">
+            <p>If you are taking medication/-s for Crohn's and IBS, we do not advise that you stop the medication. Zoilevium Puregut is meant to be used as supportive therapy. Do not use when pregnant and/or breastfeeding.</p>
+        </div>
+
+        <div class="dropdown">
+            <button id="dropbtn5" class="dropbtn"
+                onclick="toggleDropdown('dropdownContent5', 'dropbtn5', 'arrow5')">Dosage and directions for
+                use:</button>
+            <span id="arrow5" class="arrow" onclick="toggleDropdown('dropdownContent5', 'dropbtn5', 'arrow5')">▼</span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent5">
+            <p>Take 15 drops daily in a glass of water, or preferred consumable drink. Do not drink undiluted. Dosage may be divided into any amount preferred, as long as 15 drops per day are consumed. Relief may be experienced within 6 - 8 weeks after starting the regimen, as your body may need time to detox and adjust to the mineral supplement.
+                A 30 ml bottle will last for approximately 30 days.
+            </p>
+        </div>
+        <div>
+
         </div>
     </div>
 
     <footer>
         <div class="footer ">
-          <div class="footer-img">
-            <img  src="../../Images/Stoigela Logo.jpg" height="200px" width="150px" class="bi m-5" alt="Stoigela Logo">
-          </div>
-          <div>
-            <h4>Pages:</h4>
-            <a href="../../index.html">Home</a>
-            <a href="Research.html">Research</a>
-            <a href="Contact.html">Contact</a>
-            <a href="AboutUs.html">About Us</a>
-            <a href="PrivacyPolicy.html">Privacy Policy</a>
-          </div>
-          <div>
-            <h4>Product Pages:</h4>
-            <a href="Products.html">Products</a>
-            <a href="Topical.html">Topical</a>
-            <a href="PureGut.html">PureGut</a>
-            <a href="Immune Support.html">Immune Support</a>
-          </div>
-          <div>
-            <h4>Testimonials:</h4>
-            <a href="TestimonialsTopical.html">Topical</a>
-            <a href="TestimonialsPureGut.html">PureGut</a>
-            <a href="TestimonialsImmuneSupport.html">Immune Support</a>
-          </div>
-          <div>
-            <h4>Contact Us:</h4>
-            <h5>Send us an email:</h5>
-            <p>support@stoigela.co.za</p>
-            </br>
-            <h5>Our Address:</h5>
-            <p>Stoigela (Pty) Ltd</p>
-            <p>15 Melkbos Street</p>
-            <p>Grimbeekpark</p>
-            <p>South Africa</p>
-            <p>2531</p>
-          </div>
+            <div class="footer-img">
+                <img src="../../Images/Stoigela Logo.jpg" height="200px" width="150px" class="bi m-5"
+                    alt="Stoigela Logo">
+            </div>
+            <div>
+                <h4>Pages:</h4>
+                <a href="../../index.html">Home</a>
+                <a href="Research.html">Research</a>
+                <a href="Contact.html">Contact</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="PrivacyPolicy.html">Privacy Policy</a>
+            </div>
+            <div>
+                <h4>Product Pages:</h4>
+                <a href="Products.html">Products</a>
+                <a href="Topical.html">Topical</a>
+                <a href="PureGut.html">PureGut</a>
+                <a href="Immune Support.html">Immune Support</a>
+            </div>
+            <div>
+                <h4>Testimonials:</h4>
+                <a href="TestimonialsTopical.html">Topical</a>
+                <a href="TestimonialsPureGut.html">PureGut</a>
+                <a href="TestimonialsImmuneSupport.html">Immune Support</a>
+            </div>
+            <div>
+                <h4>Contact Us:</h4>
+                <h5>Send us an email:</h5>
+                <p>support@stoigela.co.za</p>
+                </br>
+                <h5>Our Address:</h5>
+                <p>Stoigela (Pty) Ltd</p>
+                <p>15 Melkbos Street</p>
+                <p>Grimbeekpark</p>
+                <p>South Africa</p>
+                <p>2531</p>
+            </div>
         </div>
         <div class="copyright-notice">
-          <p>© 2023 Stoigela</p>
+            <p>© 2023 Stoigela</p>
         </div>
-  
-      </footer>
+
+    </footer>
+    <script src="../../Stoigela.com/Dropdown.js"></script>
 </body>
 
 </html>

@@ -18,16 +18,62 @@ h1 {
 .lists li {
     margin-top: 20px;
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.container li {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
 p {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+h1.animate {
+    position: relative;
+    left: -100%; /* Start off-screen to the left */
+    animation: moveRight 1s ease-out forwards; /* Define the animation */
+}
+
+h2.animate {
+    position: relative;
+    left: -100%; /* Start off-screen to the left */
+    animation: moveRight 1.2s ease-out forwards; /* Define the animation */
+}
+
+/* Apply fade-in animation */
+.laboratory {
+    opacity: 0;                    /* Start hidden */
+    animation: fadeIn 2s ease-in forwards;
+    /* Duration of 2 seconds; 'forwards' keeps opacity at 1 after the animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Define the animation keyframes */
+@keyframes moveRight {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+h1{
+    font-size: 24px;
 }
 
 h2 {
@@ -35,6 +81,7 @@ h2 {
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
+    font-size: 20px;
 }
 
 h3 {
@@ -42,6 +89,7 @@ h3 {
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
+    font-size: 18px;
 }
 
 .titlelines {
