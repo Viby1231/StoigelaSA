@@ -22,6 +22,46 @@ body {
     background-color: #f0f0f0;
 }
 
+h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: -26%;
+            }
+        }
+
+        .top-of-page {
+            width: 100%;
+            padding: 30px 0;
+            align-content: center;
+            text-align: center;
+            height: 180px;
+            align-items: center;
+            background: linear-gradient(to right, #1288B3,#1288B3, #00e1ff00);
+
+            gap: 100px;
+
+        }
+
+        .top-of-page h1 {
+            font-size: 80px;
+            font-weight: 500;
+            font-family: 'Times new roman', Times, serif;
+            text-shadow: rgb(43, 43, 43) 0px 1px 10px;
+            color: #f0f0f0;
+
+        }
+
 .container {
             margin-top: 2%;
             display: grid;
@@ -39,7 +79,7 @@ body {
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             font-style: normal;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .footer p{
@@ -54,6 +94,7 @@ body {
             font-weight:bold;
             color: #11577E;
             font-style: normal;
+            font-size: 40px;
         }
 
         .dropdown-menu  h5{
@@ -85,7 +126,7 @@ body {
 
         h2 {
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 22px;
             text-align: left;
             font-family: "Space Grotesk", sans-serif;
             font-weight:bold;
@@ -173,6 +214,19 @@ body {
               text-align: left;
             }
 
+            .top-of-page h1{
+                font-size: 50px;
+            }
+            @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
 
         }
     </style>
@@ -238,7 +292,9 @@ body {
           </div>
       </div>
     </nav>
-
+    <div class="top-of-page">
+      <h1 class="animate">Contact Us</h1>
+    </div>
     <div class="container">
         <div class="flex">
             <h1>Get In Touch</h1>

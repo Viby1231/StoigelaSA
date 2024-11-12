@@ -25,6 +25,55 @@
             src: url(../../Fonts/NEUROPOL.ttf);
             /* Locate the .ttf file within your directory*/
         }
+        h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        h2.animate {
+            position: relative;
+            right: -100%;
+            /* Start off-screen to the left */
+            animation: moveLeft 1s ease-out forwards;
+        }
+
+        h2.animate2 {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1.1s ease-out forwards;
+        }
+
+        h5.animate{
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: -100%;
+            }
+
+            100% {
+                right: 0%;
+            }
+        }
+        @keyframes fadeIn{
+            0%{opacity: 0%;}
+            100%{opacity: 100%;};
+        }
 
         ul {
             text-align: justify;
@@ -142,7 +191,7 @@
         }
 
         .column li {
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .column h2,
@@ -153,9 +202,9 @@
 
         .column p {
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 18px;
             text-align: justify;
-            font-size: 19px;
+
         }
 
         .table {
@@ -193,7 +242,7 @@
         .second-page p,
         .second-page ul {
             margin: 0 0 20px 0;
-            font-size: 20px;
+            font-size: 18px;
             text-align: justify;
         }
 
@@ -353,10 +402,10 @@
         </div>
     </nav>
     <div class="top-of-page-title">
-        <h1>ZOILEVIUM</h1>
-        <h2>IMMUNE</h2>
-        <h2>SUPPORT</h2>
-        <h5>FOR IMPROVED GENERAL WELL-BEING</h5>
+        <h1 class="animate">ZOILEVIUM</h1>
+        <h2 class="animate">IMMUNE</h2>
+        <h2 class="animate2">SUPPORT</h2>
+        <h5 class="animate">FOR IMPROVED GENERAL WELL-BEING</h5>
     </div>
     <div class="container">
         <div class="flex">

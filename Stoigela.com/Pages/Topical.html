@@ -19,6 +19,50 @@
             align-content: center;
         }
 
+        h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        h2.animate {
+            position: relative;
+            right: -100%;
+            /* Start off-screen to the left */
+            animation: moveLeft 1s ease-out forwards;
+        }
+
+        h5.animate{
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: -100%;
+            }
+
+            100% {
+                right: 0%;
+            }
+        }
+        @keyframes fadeIn{
+            0%{opacity: 0%;}
+            100%{opacity: 100%;};
+        }
+        
+
         @font-face {
             font-family: 'Neuropol';
             /* Name your font family */
@@ -162,7 +206,7 @@
         .column p {
             margin-top: 20px;
             text-align: justify;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .dropdown-menu h5 {
@@ -197,7 +241,7 @@
         .second-page p,
         .second-page ul {
 
-            font-size: 16px;
+            font-size: 18px;
             text-align: justify;
         }
 
@@ -380,9 +424,9 @@
         </div>
     </nav>
     <div class="top-of-page-title">
-        <h1>ZOILEVIUM</h1>
-        <h2>TOPICAL</h2>
-        <h5>ANTISEPTIC AND WOUND HEALING</h5>
+        <h1 class="animate">ZOILEVIUM</h1>
+        <h2 class="animate"> TOPICAL</h2>
+        <h5 class="animate">ANTISEPTIC AND WOUND HEALING</h5>
     </div>
 
     <div class="container">

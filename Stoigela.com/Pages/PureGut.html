@@ -27,6 +27,49 @@
             /* Locate the .ttf file within your directory*/
         }
 
+        h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        h2.animate {
+            position: relative;
+            right: -100%;
+            /* Start off-screen to the left */
+            animation: moveLeft 1s ease-out forwards;
+        }
+
+        h5.animate{
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: -100%;
+            }
+
+            100% {
+                right: 0%;
+            }
+        }
+        @keyframes fadeIn{
+            0%{opacity: 0%;}
+            100%{opacity: 100%;};
+        }
+
         ul {
             text-align: justify;
         }
@@ -96,6 +139,10 @@
             /* Smooth transition */
         }
 
+        .dropdown-content p{
+            font-size: 16px;
+        }
+
         .dropdown-content.show {
             max-height: 1000px;
             /* Set a maximum height for the content */
@@ -148,7 +195,7 @@
         }
 
         .column li {
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .column h2,
@@ -159,7 +206,7 @@
 
         .column p {
             margin-top: 20px;
-            font-size: 16px;
+            font-size: 18px;
             text-align: justify;
 
         }
@@ -199,7 +246,7 @@
         .second-page p,
         .second-page ul {
             margin: 0 0 20px 0;
-            font-size: 20px;
+            font-size: 18px;
             text-align: justify;
         }
 
@@ -352,9 +399,9 @@
         </div>
     </nav>
     <div class="top-of-page-title">
-        <h1>ZOILEVIUM</h1>
-        <h2>PUREGUT</h2>
-        <h5>IBS AND GUT HEALTH SUPPORT</h5>
+        <h1 class="animate">ZOILEVIUM</h1>
+        <h2 class="animate">PUREGUT</h2>
+        <h5 class="animate">IBS AND GUT HEALTH SUPPORT</h5>
     </div>
     <div class="container">
         <div class="flex">

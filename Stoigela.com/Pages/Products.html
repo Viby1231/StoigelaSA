@@ -16,21 +16,49 @@
             justify-content: center;
             height: 200px;
             align-items: center;
-            margin-left: 10%;
-            margin-right: 10%;
 
+
+            background-color: #1288B3;
             gap: 100px;
             
           }
-          
+
+          @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+          }
+
+          h1.animate {
+              position: relative;
+              left: -100%; /* Start off-screen to the left */
+              animation: moveRight 1s ease-out forwards; /* Define the animation */
+
+          }
+
+                @keyframes moveRight {
+          0% {
+              left: -100%;
+          }
+          100% {
+              left: 0;
+          }
+      }
+
           .top-of-page h1 {
-            color: #0D6585;
+            color: #ffffff;
             font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            border-right: #ffffff solid;
+            width: 350px;
+            text-shadow: rgb(43, 43, 43) 0px 1px 10px;
           }
           .top-of-page p {
             width: 500px;
-            padding: 50px;
+            padding: 0px;
             font-size: 20px;
+            color: #ffffff;
+            animation: fadeIn 1s ease-in forwards;
+            text-shadow: rgb(43, 43, 43) 0px 1px 10px;
         }
 
         @media (max-width: 1200px) and (min-width: 425px) {
@@ -138,7 +166,7 @@
         </div>
       </nav>
       <div class="top-of-page">
-        <h1 >Our Products</h1>
+        <h1 class="animate">Our Products</h1>
         <p class="flex-item">Choose from one of Stoigela's premium Zoilevium products to find out more about them.</p>
     </div>
     <div class="parallax">

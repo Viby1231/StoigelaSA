@@ -17,6 +17,24 @@
             margin-right: 20%;
         }
         
+        h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
         .dropdown-menu  h5{
             padding: 15px;
         }
@@ -48,10 +66,30 @@
 
 
         }
+        .top-of-page {
+            width: 100%;
+            padding: 30px 0;
+            align-content: center;
+            text-align: center;
+            height: 250px;
+            align-items: center;
+            background-color:#1288B3;
+
+            gap: 100px;
+
+        }
+
+        .top-of-page h1 {
+            font-size: 80px;
+            font-weight: 500;
+            font-family: 'Times new roman', Times, serif;
+            text-shadow: rgb(43, 43, 43) 0px 1px 10px;
+            color: #f0f0f0;
+        }
 
         .body-body p {
             text-align: justify;
-            font-size: 20px;
+            font-size: 16px;
 
         }
         
@@ -77,6 +115,10 @@
 
             width: 200px;
         }
+        
+        .top-of-page h1{
+                font-size: 60px;
+            }
 
         .body-body p {
             font-size: 16px;
@@ -146,9 +188,12 @@
           </div>
         </div>
     </nav>
-
+    <div class="top-of-page">
+      <h1 class="animate">References</h1>
+    </div>
+    <br>
+    <br>
     <div class="body-body">
-        <h1>References</h1>
         <h2>Home Page</h2>
         <p>Askary, V., Jahan, N., Sabbagh, A., Jahani, F., Dourandish, N., & Kamachali, A. 2011. A potential medicinal
             importance of zinc in human health and chronic diseases. Clinical Biochemistry. 44(13), 323-324. Accessed at:

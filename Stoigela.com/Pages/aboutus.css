@@ -4,15 +4,39 @@
 
 h1 {
     text-align: center;
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
+
+h2 {
+    font-size: 22px;
+}
+
+
+.topofpagetitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1288B3;
+    width: 100%;
+    padding: 50px 0;
+    color: rgb(255, 255, 255);
+}
+
+.titlesize {
+    font-size: 80px;
+    font-weight: 500;
+    font-family: 'Times new roman', Times, serif;
+    text-shadow: rgb(43, 43, 43) 0px 1px 10px;
+}
+
 .container {
     margin-left: 200px;
     margin-right: 200px;
     text-align: justify;
+    margin: 0 auto;
+    max-width: 900px;
+
 }
 
 .lists li {
@@ -23,13 +47,7 @@ h1 {
     font-size: 16px;
 }
 
-.container li {
-    margin-top: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-}
+
 
 p {
     font-family: "Poppins", sans-serif;
@@ -44,17 +62,14 @@ h1.animate {
     animation: moveRight 1s ease-out forwards; /* Define the animation */
 }
 
-h2.animate {
-    position: relative;
-    left: -100%; /* Start off-screen to the left */
-    animation: moveRight 1.2s ease-out forwards; /* Define the animation */
-}
-
 /* Apply fade-in animation */
-.laboratory {
-    opacity: 0;                    /* Start hidden */
-    animation: fadeIn 2s ease-in forwards;
-    /* Duration of 2 seconds; 'forwards' keeps opacity at 1 after the animation */
+.laboratory
+{
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    max-width: 45%;
+    animation: fadeIn 0.8s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -72,25 +87,6 @@ h2.animate {
     }
 }
 
-h1{
-    font-size: 24px;
-}
-
-h2 {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 1000;
-    font-style: normal;
-    font-size: 20px;
-}
-
-h3 {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 1000;
-    font-style: normal;
-    font-size: 18px;
-}
 
 .titlelines {
     border: 10px;
@@ -102,13 +98,23 @@ h3 {
         margin-left: 50px;
         margin-right: 50px;
     }
+    .titlesize{
+        font-size: 60px;
+    }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .lists li {
         margin-right: 20px;
-        font-size: 16px;
+        font-size: 18px;
+    }
+    .laboratory
+    {
+        float:none;
+        max-width: 100%;
+
+        margin: 0;
     }
 }
