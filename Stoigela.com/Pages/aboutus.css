@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1rem;
 }
 
 
@@ -49,7 +49,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 
@@ -58,7 +58,7 @@ p {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 h1.animate {
@@ -108,12 +108,12 @@ h1.animate {
     }
 
     p {
-        font-size: 18px;
+        font-size: 1rem;
     }
 
     .lists li {
         margin-right: 20px;
-        font-size: 18px;
+        font-size: 1rem;
     }
     .laboratory
     {
