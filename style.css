@@ -227,6 +227,7 @@ h2.animate {
 
 
 #bgmask {
+
     background-color: rgba(255, 255, 255, 0.63);
     align-content: center;
 
@@ -297,7 +298,9 @@ p {
     }
 
     #bgmask {
+        display: flex;
         height: 600px;
+        justify-content: center;
     }
 
     #mottotitle {
@@ -456,6 +459,7 @@ p {
 
     #bgmask {
         height: 1500px;
+        justify-content: center;
 
     }
 
