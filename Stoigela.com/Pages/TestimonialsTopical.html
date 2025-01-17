@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Footer.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <style>
-        .all-testimonials{
-            display: flex;
-            flex-direction: column;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Footer.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <style>
+            .section h2 {
+                margin-top: 15px;
+            }
+            
+            .all-testimonials{
+                display: flex;
+                flex-direction: column;
+            }
 
         .before-after {
-        display: flex;
+        
         gap: 1.5rem;
         }
 
@@ -27,8 +31,14 @@
             justify-content: space-between;
         }
         
+        .after-months {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 130px;
+        }
         .section {
-        width: 48%;
+        width: 100%;
         } 
 
         .section h2 {
@@ -108,12 +118,26 @@
             .content-warning:hover {
             opacity: 0;
         }
+
         .content-warning-container {
         position: relative;
+        height: 250px;
+
         background: #f5f5f5;
         border-radius: 8px;
         overflow: hidden;
         }
+
+        .content-warning-container img {
+        height: 250px;
+        background: #f5f5f5;
+        padding: 10px;
+        }
+ 
+
+        
+
+        
 
             .content-warning p {
             margin: 0px;
@@ -225,6 +249,7 @@
         .testimonial-content {
             display: flex;
             gap: 1rem;
+                        text-align: justify;
         }
 
         .testimonial-container {
@@ -266,6 +291,9 @@
                 text-shadow: 1px 1px 10px black;
             }
 
+            .img-size-1 {
+                width: 25%
+            }
         
         .Testimonial-Topical{
             display: flex;
@@ -311,6 +339,8 @@
         border-radius: 10px;
     }
 
+
+
     @media (max-width: 1200px) and (min-width: 350px) {
 
         .top-of-page-title {
@@ -343,6 +373,7 @@
             display: flex;
             align-self: center;
             position:relative;
+            gap: 30px;
 
 
 
@@ -371,7 +402,7 @@
         }
 
         .section{
-            width: 70%;
+            width: 95%;
         }
 
 
@@ -392,6 +423,16 @@
             flex-wrap: wrap;
         }
 
+
+
+        .content-warning-container{
+            height: 100%;
+        }
+        .content-warning-container img {
+        max-height: 60%;
+        background: #f5f5f5;
+        padding: 20px;
+        }
     }
         
 
@@ -399,57 +440,14 @@
 </head>
 <body>
     <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-      <div class="container-fluid">
-        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
-            <li class="nav-item px-3">
-              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="AboutUs.html">About Us</a>
-            </li>
-            <li class="nav-item dropdown d-flex align-items-center px-3">
-                <!-- Main part of the button that links to Products.html -->
-              <a class="nav-link" href="Products.html">
-                  Products
-                </a>
-                <!-- Dropdown toggle button (the arrow) -->
-              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="visually-hidden">Toggle Dropdown</span>
-              </a>
-              <!-- Dropdown menu -->
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="Topical.html">Topical</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="PureGut.html">PureGut</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
-                  <h5>Testimonials</h5>
-                  <li><a class="dropdown-item active" href="TestimonialsTopical.html">Topical Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsImmuneSupport.html">Immune Support Testimonials</a></li>
-              </ul>
-          </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="Research.html">Research</a>
-            </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="References.html">References</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="Contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-</nav>
+    <style>
+      #navbar {
+          min-height: 120px; /* Adjust based on your navbar height */
+          background-color: #f8f9fa; /* Optional: Matches your navbar background */
+      }
+  </style>
+    <div id="navbar"></div>
+    <script src="navbarPages.js"></script>
 
 
 <div>
@@ -480,10 +478,7 @@
         <div class="testimonial-header">
             <div class="user-info">
                 <div class="user-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
+                    <img src="../../Images/Zoilevium Reviews.pdf Images/Male Icon.png">
                 </div>
                 <div class="user-details">
                     <h3>Tom van Deventer</h3>
@@ -501,27 +496,34 @@
         <div class="testimonial-content">
             <div class="before-after">
                 <div class="section before">
-                    <h2>Before</h2>
-                    <p>The state of permanent sepsis after 2 years of medical treatment.</p>
-                    <div class="content-warning-container">
-                        <div class="content-warning">
-                            <p>Warning: This content may be sensitive. Click to view.</p>
-                        </div>
-                        <div class="photo">
-                            <img src="../../Images/Before1.png" alt="Before treatment" width="100%">
-                        </div>
+                    <p>I underwent a knee replacement. The wound became septic and had puss oozing out of the wound on a
+                        permanent basis. Doctors tried everything possible to stop the infection. I also visited a wound clinic on a
+                        regular basis, but it didn’t help. After close to 2 years of battling the infection I reached the stage where my
+                        doctor suggested amputating the leg to prevent the sepsis from spreading any further. I started using
+                        Zoilevium Topical which I started squirting into the septic wound. After 8 days the sepsis was gone. I am
+                        so grateful for this product saving my leg.</p>
+                    </div>
+                    
+                    <div class="section after">
+                    <h2>Before:</h2>
+                <div class="content-warning-container">
+                    <div class="content-warning">
+                        <p>Warning: This content may be sensitive. Click to view.</p>
+                    </div>
+                    <div class="photo">
+                        <img class=""img-size-1 src="../../Images/Zoilevium Reviews.pdf Images/Tom Van Deventer Before 1.png" alt="Before treatment">
+                        <img src="../../Images/Zoilevium Reviews.pdf Images/Tom Van Deventer Before  2.png" alt="Before treatment" >
+
                     </div>
                 </div>
+                    <h2>After 8 days:</h2>
 
-                <div class="section after">
-                    <h2>After</h2>
-                    <p>The state of the infection after using Zoilevium Topical for 8 days.</p>
                     <div class="content-warning-container">
                         <div class="content-warning">
                             <p>Warning: This content may be sensitive. Click to view.</p>
                         </div>
                         <div class="photo">
-                            <img src="../../Images/using Zoilevium Topical for 8 Days.png" alt="After 8 days of treatment" width="35%">
+                            <img src="../../Images/Zoilevium Reviews.pdf Images/Tom Van Deventer After.png" alt="After 8 days of treatment" >
                         </div>
                     </div>
                 </div>
@@ -552,40 +554,38 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2 >Before</h2>
-                        <p style="margin-bottom: 50px;">The state of an open infected wound after 2 weeks of medical treatment, which included an antibiotic injection, antibiotic cream, bee-cream and physical scrubbing of the wound with a brush.</p>
-                        <div class="content-warning-container">
+                        <p style="margin-bottom: 50px;">I was bitten by mosquitoes while on holiday in Mozambique. Due to all the scratching, the bites got
+                            infected. When I got back to South Africa I went to see my doctor to attend to the infection. After 2 weeks
+                            of medical treatment, which included antibiotics, antibiotic cream, bee-cream and physical scrubbing of
+                            the wound with a brush, the infection was still there. I used Zoilevium Topical which cleared up the
+                            infection within 3 days. Thank you so much. Zoilevium is now the first thing I pack when going holiday
+                            camping.</p>
+                            <h2 >Before:</h2>
+                            <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 2 Before.png" alt="Before treatment" width="100%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Henry Snyman Before1.png " alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Henry Snyman Before 2.png " alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <h5 margin-top: 20px;>The state of the wound after 1 day of using Zoilevium Topical.</h5>
+                        <h2>After 3 Days:</h2>
+
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 2 After 1.png" alt="After 8 days of treatment" width="100%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Henry Snyman After 1.png " alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Henry Snyman After 2.png " alt="Before treatment" >
                             </div>
                             
                         </div>
-                        <h5 style="margin-top: 20px;">The wound after 3 days of using Zoilevium Topical.</h5>
-                        <div class="content-warning-container">
-                            <div class="content-warning">
-                                <p>Warning: This content may be sensitive. Click to view.</p>
-                            </div>
-                            <div class="photo">
-                                <img src="../../Images/Case Study 2 After 2.png" alt="After 8 days of treatment" width="100%">
-                            </div>
-                            
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -600,7 +600,7 @@
                         <img src="../../Images/Patricia Van Wyk.png" height="120px" width="100px">
                     </div>
                     <div class="user-details">
-                        <h3>Patricia van Wyk</h3>
+                        <h3>Shirley van Wyk</h3>
                         <p>64 years old</p>
                         <p>Hartswater, South Africa</p>
                     </div>
@@ -615,27 +615,31 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>A lady with throat cancer, incubated with an endotracheal tube and struggling with infection for 3 months with pus oozing from the tube entrance.  </p>
+                        <p>I was diagnosed with throat cancer and had to be incubated with an endotracheal tube. The wound around
+                            the tube got infected to such an extent that large amounts of puss was oozing out of the wound daily.
+                            Nothing that was done by the doctors or myself could stop the puss. I started using Zoilevium and found
+                            immediate relief. After 2 days there was no sign of any puss on the outside of the wound. A product I
+                            would HIGHLY recommend.</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 3 Before.png" alt="Before treatment" width="70%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Shirley Van Wyk Before.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <p>The state of the wound after using Zoilevium Topical for the period indicated.</p>
+                        <h2>After 2 Days:</h2>
+
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 3 After.png" alt="After 8 days of treatment" width="90%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Shirley Van Wyk After.png " alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -667,28 +671,32 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>The state of a Folliculitis infection after 9 days of medical treatment, which included antibiotics and antibiotic cream. Escalating pain levels experienced.</p>
+                        <p>I picked up a Folliculitis infection. After 9 days of medical treatment, which included antibiotics and
+                            antibiotic cream, there was no relief. The area was extremely sore and was getting bigger. My mother
+                            suggested using Zoilevium as she had had great results in the past with the product. I squirted the product
+                            into the septic area and experienced relief almost immediately. After 2 days all the pain was gone and the
+                            infected area looked much better. A product I highly recommend.</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 4 Before.png" alt="Before treatment" width="100%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous 28 Before 1.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous 28 Before 2.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <p style="margin-bottom: 15px;">The state of the wound after 2 days of using Zoilevium Topical.</p>
-                        <h5>Infection gone, swelling down and no pain at all.</h5>
+                        <h2>After 2 days:</h2>
+
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 4 After.png" alt="After 8 days of treatment" width="70%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous 28 After.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -722,27 +730,39 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>The state of an open infected wound for more than 10years,caused the lady to be wheelchair bound.</p>
+                        <p>I was struggling with an open wound that was constantly infected and just would not heal. Doctors and
+                            wound clinics couldn’t help with the problem. Over a period of 10 years, I tried every medication and
+                            every home remedy I could find, but to no avail. The wound became so bad that I was confined to a
+                            wheelchair most of the time. I was referred to Zoilevium by a friend of mine. I used the product diligently
+                            for a period of 12 months. The wound is completely closed and healed. An amazing product I have
+                            recommended to all my friends.</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Open Wound Case Study 1 before.png" alt="Before treatment" width="90%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Rentia Claasen Before 1.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Rentia Claasen Before 2.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Rentia Claasen Before 3.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <p>The state of infection after using Zoilevium Topical for:</p>
+                        <h2>After:</h2>
+
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case study 1 open wound after.png" alt="After 8 days of treatment" width="60%">
+                                <div class="after-months">
+                                    <h2>After 10 Months</h2>
+                                    <h2>After 12 Months</h2>
+                                </div>
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Rentia Claasen After 1.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Rentia Claasen After 2.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -776,27 +796,31 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>The state of an open wound. Doctor’s and wound clinic treated the wound unsuccessfully for 4 months. </p>
+                        <p>Due to a presumed bacterial infection, I developed an open wound on a toe, which started spreading to an
+                            adjacent toe. After 3 months of doctors and wound clinics I was worried that the infection would
+                            eventually consume my whole foot. I heard of Zoilevium from a friend and started using the product.
+                            After around 3 weeks the toes had healed, and the apparent infection was gone. A product I would highly
+                            recommend.</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 2 Open wound before.png" alt="Before treatment" width="50%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Lous van Deventer Before.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <p>The state of the wound after using Zoilevium Topical for 2½ weeks:</p>
+                        <h2>After 3 weeks:</h2>
+
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case study 2 open wound after.png" alt="After 8 days of treatment" width="50%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Lous van Deventer After.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -816,15 +840,11 @@
             <div class="testimonial-header">
                 <div class="user-info">
                     <div class="user-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                        </svg>
+                        <img src="../../Images/Zoilevium Reviews.pdf Images/Female Icon.png" >
                     </div>
                     <div class="user-details">
                         <h3>Anonymous </h3>
-                        <p>Age Unknown</p>
-                        <p>Mossel Bay, South Africa</p>
+                        <p>Western Cape, South Africa</p>
                     </div>
                 </div>
                 <div class="case-study">
@@ -837,29 +857,31 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>The state of an open wound after 3 months of treatment at a wound clinic. </p>
-                        <p>A nurse at the wound clinic with 38-years of nursing experience reported that all standard treatments were not yielding results.</p>
+                        <p>I am a nurse at a wound clinic in the Western Cape. All information I reveal is done with the consent of
+                            the patient concerned. The lady came to us with a big open wound on her stomach. All our standard
+                            treatments did not yield results. Out of desperation I decided to use Zoilevium Topical which a former
+                            patient had told me of, and who had reported great results with the product. The improvement over a
+                            period of 2 weeks was amazing. I have been a practicing nurse for around 38 years and am very
+                            impressed with the product. I now refer to it as our magic potion. Highly recommended.</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 3 Open Wound before.png" alt="Before treatment" width="25%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous Before.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
-                        <p>The state of the wound after being treated with Zoilevium Topical for the periods as indicated. </p>
-                        <p>The nurse at the wound clinic confirmed that the only change in treatment regime was the use of the Zoilevium product. </p>
+                        <h2>After 2 - 3 weeks:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 3 Open Wound After.png" alt="After 8 days of treatment" width="40%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous After.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -873,12 +895,11 @@
             <div class="testimonial-header">
                 <div class="user-info">
                     <div class="user-image">
-                        <img src="../../Images/Anonymous.png" height="120px" width="100px">
+                        <img src="../../Images/Zoilevium Reviews.pdf Images/Male Icon.png">
                     </div>
                     <div class="user-details">
                         <h3>Anonymous </h3>
-                        <p>62 years old</p>
-                        <p>Somerset Strand, South Africa</p>
+                        <p>Parys, South Africa.</p>
                     </div>
                 </div>
                 <div class="case-study">
@@ -891,27 +912,32 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                        <h2>Before</h2>
-                        <p>The state of an openwound. Lady struggled unsuccessfully for 2 months to get the wound to heal.</p>
+                        <p>I injured my toe in a machinery accident. The toe got infected and wouldn’t heal. I heard of Zoilevium
+                            from my gym coach. I started using the spray and got amazing results. I struggled with the injury for 7
+                            months with no joy. The Zoilevium spray cleared up the infection and helped the wound to heal within 3
+                            weeks. Unfortunately, lots of damage to the toe occurred during the 7 months. I really wish I had started
+                            using the product earlier. Awesome product!!!</p>
+                            <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 4 Open Wound Before.png" alt="Before treatment" width="70%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous Parys Before 1.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous Parys Before 2.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-                        <h2>After</h2>
+                        <h2>After:</h2>
                         <p>Thestateofthe wound after using Zoilevium Topical for 1½ weeks.</p>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/Case Study 4 Open Wound After.png" alt="After 8 days of treatment" width="33%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Anonymous Parys After.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -920,6 +946,7 @@
         </div>
     </div>
 
+    <div id="content"></div>
 
     <script src="../../Stoigela.com/ContentWarning.js"></script>
 </body>
@@ -967,4 +994,5 @@
     </div>
 
   </footer>
+  <script src="../SearchPages.js"></script>
 </html>

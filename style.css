@@ -7,14 +7,23 @@
     --primary-color: #11577E;
 }
 
+.nav-link.active2 {
+    border-top: 1px solid;
+    border-bottom: 1px solid ;
+}
     /* Navbar and search box styling */
     .navbar {
         background-color: #f8f9fa;
         padding: 15px;
       }
 
+      .dropdown-toggle.active2{
+        border-top: 0;
+        border-bottom: 0;
+      }
+
       #search-box {
-        border: 1px solid #ced4da;
+        border: 1px solid #ced4da; 
         border-radius: 5px;
         padding: 5px 10px;
         margin-left: 20px;
@@ -452,7 +461,9 @@ p {
         text-align: center;
     
     }
-    
+
+
+
     p {
         font-size: 16px;
     }
@@ -675,5 +686,4 @@ p {
         width: 100%;
         align-items: center;
     }
-
 }

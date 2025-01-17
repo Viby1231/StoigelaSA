@@ -14,13 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <style>
 
+
+.section h2 {
+                margin-top: 15px;
+            }
+            
 .all-testimonials{
             display: flex;
             flex-direction: column;
         }
 
         .before-after {
-        display: flex;
+
         gap: 1.5rem;
         }
 
@@ -29,7 +34,7 @@
         }
         
         .section {
-        width: 48%;
+        width: 100%;
         } 
 
         .section h2 {
@@ -109,11 +114,21 @@
             .content-warning:hover {
             opacity: 0;
         }
+
         .content-warning-container {
         position: relative;
         background: #f5f5f5;
         border-radius: 8px;
         overflow: hidden;
+        }
+
+        .content-warning-container img{
+        position: relative;
+        background: #f5f5f5;
+        border-radius: 8px;
+        height: 170px;
+        overflow: hidden;
+        padding: 20px;
         }
 
             .content-warning p {
@@ -224,9 +239,10 @@
             } 
 
             .testimonial-content {
-                display: flex;
+
                 gap: 1rem;
                 flex-direction: column;
+                text-align: justify;
             }
 
         .testimonial-container {
@@ -373,7 +389,7 @@
         }
 
         .section{
-            width: 70%;
+            width: 95%;
         }
 
 
@@ -402,57 +418,14 @@
 </head>
 <body>
     <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-      <div class="container-fluid">
-        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
-            <li class="nav-item px-3">
-              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="AboutUs.html">About Us</a>
-            </li>
-            <li class="nav-item dropdown d-flex align-items-center px-3">
-                <!-- Main part of the button that links to Products.html -->
-                <a class="nav-link" href="Products.html">
-                    Products
-              </a>
-              <!-- Dropdown toggle button (the arrow) -->
-              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="visually-hidden">Toggle Dropdown</span>
-              </a>
-              <!-- Dropdown menu -->
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="Topical.html">Topical</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="PureGut.html">PureGut</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
-                  <h5>Testimonials</h5>
-                  <li><a class="dropdown-item" href="TestimonialsTopical.html">Topical Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item active" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsImmuneSupport.html">Immune Support Testimonials</a></li>
-                </ul>
-            </li>
-            <li class="nav-item px-3">
-                <a class="nav-link" href="Research.html">Research</a>
-            </li>
-            <li class="nav-item px-3">
-                <a class="nav-link" href="References.html">References</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="Contact.html">Contact Us</a>
-            </li>
-        </ul>
-        </div>
-      </div>
-    </nav>
+    <style>
+      #navbar {
+          min-height: 120px; /* Adjust based on your navbar height */
+          background-color: #f8f9fa; /* Optional: Matches your navbar background */
+      }
+  </style>
+    <div id="navbar"></div>
+    <script src="navbarPages.js"></script>
 
     
     <div>
@@ -498,34 +471,35 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                            <p>Diagnosed with severe Crohn’s disease in 2014. Started using PureGut in 2019. Had</p>
-                            <p>severe symptoms which included diarrhea, cramps, nausea, weight loss and always feeling tired and without energy.</p>
-                        <h2>Before</h2>
-                        <p>The state of intestines at the age of 56 after 5 years of treatment on conventional medicines.</p>
+                            <p>I was diagnosed with severe Crohn’s disease in 2014. I suffered from severe symptoms which included 
+                                diarrhoea, cramps, nausea, weight loss and always feeling tired and without energy. Medication I used 
+                                didn’t help much or even at all to ease the severe symptoms I was experiencing. I started using Zoilevium 
+                                PureGut in 2019. I started feeling relief after about 2 months of use. I was in full remission after about 6 
+                                to 8 months. Since then I have been able to lead a normal life with no dietary restrictions. I have been 
+                                using PureGut on a permanent basis (as a preventative measure) and have had no relapses since 2019 until 
+                                current date (September 2023). I would strongly recommend this product to IBD and IBS sufferers. </p>
+                        <h2>Before:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/PureGut Case Study 1 Before.png" alt="Before treatment" width="70%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Hester Smith Before 1.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Hester Smith Before 2.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Hester Smith Before 3.png" alt="Before treatment" >
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Hester Smith Before 4.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
     
                     <div class="section after">
-
-                            <p>Started feeling better after 2 months of use.</p>
-                            <p>Full remission after 6 to 8 months. Has been able to lead a normal life since then with no dietary restrictions.</p>
-                            <p>Uses PureGut on a permanent basis and 
-                                has had no relapses since 2019 until current date (September 2023). </p>
-                        <h2>After</h2>
-                        <p>The state of intestines after using PureGut for 6 months.</p>
+                        <h2>After:</h2>
                         <div class="content-warning-container">
                             <div class="content-warning">
                                 <p>Warning: This content may be sensitive. Click to view.</p>
                             </div>
                             <div class="photo">
-                                <img src="../../Images/PureGut Case Study 1 After.png" alt="Before treatment" width="70%">
+                                <img src="../../Images/Zoilevium Reviews.pdf Images/Hester Smith After.png" alt="Before treatment" >
                             </div>
                         </div>
                     </div>
@@ -561,15 +535,14 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                            <p>Diagnosed with severe Crohn’s disease in 2008.</p>
-                            <p>Started using PureGut in 2019. </p>
-                            <p>Started feeling better after 2 months of use. </p>
-                    </div>
-    
-                    <div class="section after">
-                            <p>Full remission after 6 to 8 months.</p>
-                            <p>Has been able to lead a normal life since then and has regained her normal weight.</p>
-                            <p>Uses PureGut on a permanent basis and has had no relapses since 2019 until current date (September 2023). </p>
+                            <p>I was diagnosed with severe Crohn’s disease in 2008. My symptoms were so severe and disruptive that I 
+                                was effectively confined to my home for many years. I heard of the Zoilevium product from a neighbour 
+                                and started using it in 2019. I started feeling better after about 2 to 3 months of use. I was in full 
+                                remission after about 8 months. Since then, I have been able to lead a normal life. I can come and go as I 
+                                please and eat whatever I like. I have also regained my normal weight. I now use PureGut on a permanent 
+                                basis and have had no relapses since 2019 until current date (September 2023).
+                                </p>
+
                     </div>
                 </div>
                 <div class="doctors-report">
@@ -580,46 +553,8 @@
         </div>
     </div>
 
-    <br>
 
-    <div class="testimonial-container">
-        <div class="testimonial">
-            <div class="testimonial-header">
-                <div class="user-info">
-                    <div class="user-image">
-                        <img src="../../Images/Cecillia.png" height="110px" width="100px">
-                    </div>
-                    <div class="user-details">
-                        <h3>Cecilia Horn</h3>
-                        <p>44 years old</p>
-                        <p>Utrecht, South Africa</p>
-                    </div>
-                </div>
-                <div class="case-study-puregut case-study">
-                    <h4>STOIGELA (PTY) LTD</h4>
-                    <h2>PureGut vs Crohn’s Infection (IBD) </h2>
-                    <h3>Case Study 3</h3>
-                </div>
-            </div>
-            <br>
-            <div class="testimonial-content">
-                <div class="before-after">
-                    <div class="section before">
-                            <p>Diagnosed with severe Crohn’s disease in 2016.</p>
-                            <p>Started using PureGut in 2023. </p>
-                            <p>Suffered from very bad symptoms which included diarrhea, bloody stools, cramps, nausea, weight loss and anemia. </p>
-                    </div>
-    
-                    <div class="section after">
-                            <p>Started feeling better after 2 months, which included a weight gain of 4kg.</p>
-                            <p>Symptoms after 2 months were 
-                                significantly reduced.</p>
-                            <p>Has been using PureGut for 3 months and intends using PureGut on a permanent basis. (current date: September 2023)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <br>
     <div class="testimonial-container">
         <div class="testimonial">
@@ -644,17 +579,16 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                            <p>Diagnosed with severe Crohn’s disease in 2019.</p>
-                            <p>Started using PureGut in 2023. </p>
-                            <p>Suffered from very bad symptoms which included diarrhea, bloody stools, cramps, nausea, severe pain and a swollen abdomen. </p>
+                            <p>I was diagnosed with severe Crohn’s disease in 2019. I suffered from very bad symptoms which included 
+                                diarrhoea, bloody stools, cramps, nausea, severe abdominal pain and swelling. A family member told me 
+                                about Zoilevium PureGut. With conventional medicine not bringing much relief I felt I had nothing to 
+                                lose by trying PureGut. I started using PureGut in 2023. I started feeling better after about 1 month. My 
+                                symptoms reduced significantly after 1 to 11/2 months of using PureGut. After about 4 months I was able 
+                                to lead a normal life and follow an unrestricted diet. I have been using PureGut on a permanent basis now 
+                                and would highly recommend the product. (current date: September 2024).</p>
+</p>
                     </div>
-                    
-                    <div class="section after">
-                            <p>Symptoms reduced significantly after 1 to 11½ months of using PureGut. </p>
-                            <p>Started feeling better after 2 weeks of using PureGut.</p>
-                            <p>Has been using PureGut for 4 months on a permanent basis. (current date: September 2023)</p>
-                            <p>Has been able to lead a normal life and follow a normal diet. </p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -683,14 +617,12 @@
             <div class="testimonial-content">
                 <div class="before-after">
                     <div class="section before">
-                            <p>I suffered from constant bloating and discomfort. Nothing I used helped to relieve the symptoms. </p>
-                            <p>I started using the PureGut drops and experienced relief within a few days.</p>
+                            <p>I suffered from constant bloating and discomfort. Nothing I used helped to relieve the symptoms. I started 
+                                using the Zoilevium PureGut drops and experienced relief within a few days. The drops worked like a 
+                                dream come true. Since using the drops, I have never felt bloated again. I use the drops on a continuous 
+                                basis and really enjoy not being uncomfortable the whole time</p>
                     </div>
     
-                    <div class="section after">
-                            <p>The drops worked like a dream come true. Since using the drops, I have never felt bloated again. </p>
-                            <p>I use the drops on a continuous basis and really enjoy not being uncomfortable the whole time.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -744,4 +676,5 @@
     </div>
 
   </footer>
+  <script src="../SearchPages.js"></script>
 </html>

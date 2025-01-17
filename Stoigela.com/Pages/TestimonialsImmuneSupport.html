@@ -207,6 +207,7 @@
             font-weight: 400;
             font-style: normal;
             font-size: 16px;
+
             }
 
             .photo.active {
@@ -225,6 +226,7 @@
         .testimonial-content {
             display: flex;
             gap: 1rem;
+            text-align: justify;
         }
 
         .testimonial-container {
@@ -371,7 +373,7 @@
         }
 
         .section{
-            width: 70%;
+            width: 95%;
         }
 
 
@@ -400,57 +402,14 @@
 </head>
 <body>
     <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-      <div class="container-fluid">
-        <a class="navbar-brand px-2" href="#"><img src="../../Images/Stoigela Logo.png" width="60px;" style="padding-right: 5px;">Stoigela</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0  align-items-center">
-            <li class="nav-item px-3">
-              <a class="nav-link " aria-current="page" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="AboutUs.html">About Us</a>
-            </li>
-            <li class="nav-item dropdown d-flex align-items-center px-3">
-                <!-- Main part of the button that links to Products.html -->
-                <a class="nav-link" href="Products.html">
-                  Products
-              </a>
-              <!-- Dropdown toggle button (the arrow) -->
-              <a class="nav-link dropdown-toggle dropdown-toggle-split ms-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="visually-hidden">Toggle Dropdown</span>
-                </a>
-                <!-- Dropdown menu -->
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="Topical.html">Topical</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="PureGut.html">PureGut</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="Immune Support.html">Immune Support</a></li>
-                  <h5>Testimonials</h5>
-                  <li><a class="dropdown-item" href="TestimonialsTopical.html">Topical Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="TestimonialsPureGut.html">PureGut Testimonials</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item active" href="TestimonialsImmuneSupport.html">Immune Support Testimonials</a></li>
-                </ul>
-            </li>
-            <li class="nav-item px-3">
-                <a class="nav-link" href="Research.html">Research</a>
-            </li>
-            <li class="nav-item px-3">
-                <a class="nav-link" href="References.html">References</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="Contact.html">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-      </div>
-    </nav>
+    <style>
+      #navbar {
+          min-height: 120px; /* Adjust based on your navbar height */
+          background-color: #f8f9fa; /* Optional: Matches your navbar background */
+      }
+  </style>
+    <div id="navbar"></div>
+    <script src="navbarPages.js"></script>
     
     
     <div>
@@ -501,13 +460,23 @@
                 <div class="testimonial-content">
                     <div class="before-after">
                         <div class="section before">
-                            <p>I am an elderly lady of 75 who was feeling 120 years old.</p>
-                            <p> I suffered from digestive problems, chronic pain in my hands and wrists from arthritis, as well as over-all aches and pains due to fibromyalgia. I was permanently tired, to the extent that most days I could hardly get out of bed.</p>
-                            <p>I was told about how wonderful the Zoilevium Immune Support product was from a nephew overseas. </p>
-                            <p>He in turn had seen excellent health results in a friend who had been battling with digestive trouble. </p>
-                            <p>I ordered the product and I have had amazing results with all my problems. </p>
-                            <p>My chronic pain has very significantly reduced. My energy levels have also significantly increased. To the extent that I have started working around the house and in my garden again. </p>
-                            <p>I now regard the product as part of my daily, necessary, routine. Thank you Zoilevium!</p>
+                            <p>I am an elderly lady of 75 who was feeling 120 years old. I suffered from digestive problems, chronic 
+                                pain in my hands and wrists from arthritis, as well as overall aches and pains due to fibromyalgia. I was 
+                                permanently tired, to the extent that most days I could hardly get out of bed.
+                            </p>
+                            <p>
+                                I was told about the potential positive effects of the Zoilevium Immune Support product from a nephew in 
+                                Portugal. He in turn had seen excellent health results in a friend who had been battling with digestive 
+                                problems. I ordered the product, and I have had amazing results with all my problems. My chronic pain 
+                                has very significantly reduced. My energy levels have also significantly increased. To the extent that I 
+                                have started working around the house and in my garden again.</p>
+                                <p>
+                                    I now regard the product as part of my daily, necessary, routine. Thank you Zoilevium!
+                                </p>
+                                
+                            
+
+                            
                         </div>
                     </div>
                 </div>
@@ -524,7 +493,7 @@
                             <img src="../../Images/Sarah.png" height="110px" width="100px">
                         </div>
                         <div class="user-details">
-                            <h3>Sarah Motsemm</h3>
+                            <h3>Sarah Motsemmi</h3>
                             <p>42 years old</p>
                             <p>Potchefstroom, South Africa</p>
                         </div>
@@ -539,13 +508,15 @@
                     <div class="before-after">
                         <div class="section before">
 
-                                <p>I used to suffer from chronic headaches. I was on permanent pain medication. This overuse of medication started to cause kidney problems and kidney pain.</p>
-                                <p>My employer was used to me asking for pain medication in addition to the self medication I was on.</p>
-                                <p>A client of ours introduced me to Zoilevium Immune Support and out of pure desperation I decided to try the product.</p>
-                                <p>I started to experience results after about 3 weeks of use.</p>
-                                <p>I am now totally headache free. This has had the knock-on effect of stopping my kidney pain and problems as I no longer use pain medicine. </p>
-                                <p>I use Zoilevium Immune Support on a permanent basis now and have put my family on the product as well.</p>
-                                <p>Thank you.</p>
+                                <p>I used to suffer from chronic headaches. I was on permanent pain medication. This overuse of medication 
+                                    started to cause kidney problems and kidney pain. My employer was used to me asking for pain 
+                                    medication in addition to the self-medication I was on. A client of ours introduced me to Zoilevium 
+                                    Immune Support and out of pure desperation I decided to try the product.</p>
+                                <p>I started to experience results after about 3 weeks of use. I am now totally headache free. This has had the 
+                                    knock-on effect of stopping my kidney pain and problems as I no longer use pain medicine. I use 
+                                    Zoilevium Immune Support on a permanent basis now and have put my family on the product as well.</p>
+                                <p>Thank you so much to Zoilevium</p>
+
                         </div>
                     </div>
                 </div>
@@ -566,7 +537,6 @@
                         </div>
                         <div class="user-details">
                             <h3>Anonymous male</h3>
-                            <p>56 years old</p>
                             <p>London, United Kingdom</p>
                         </div>
                     </div>
@@ -579,17 +549,13 @@
                 <div class="testimonial-content">
                     <div class="before-after">
                         <div class="section before">
-                            <ul>
-
-                                <li>After receiving the Covid-19 vaccine, the person’s health deteriorated dramatically. </li>
-                                <li>Was given chemo-therapy for approximately 6-months, followed by dialysis for 6- months. </li>
-                                <li>He was bed ridden for around a year before intervention. </li>
-                                <li>Family and friends regarded his situation as extremely dire.</li>
-                                <li>After using Zoilevium Immune Support for 3 weeks the person made a full recovery. </li>
-                                <li>He was able to get up out of bed and walk and move normally again.</li>
-                                <li>His general health returned to normal.</li>
-                                <li>He was able to resume normal activities</li>
-                            </ul>
+                            <p>After receiving the Covid-19 vaccine, my health deteriorated dramatically. I was given chemotherapy for 
+                                approximately 6-months, followed by dialysis for 6-months. I ended up with such swollen legs and 
+                                constant pain that I was bed ridden for around a year. Family and friends regarded my situation as 
+                                extremely dire, even terminal, before the Zoilevium intervention changed everything</p>
+                            <p>I was introduced to Zoilevium Immune Support by my neighbour. After using the product for 3 weeks I 
+                                felt like a new person. I made a full recovery. I was able to get up out of bed and walk and move normally 
+                                again. My general health returned to normal, and I was able to resume normal activities.</p>
                         </div>
                     </div>
                 </div>
@@ -597,38 +563,6 @@
         </div>
 
 
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <div class="testimonial-header">
-                    <div class="user-info">
-                        <div class="user-image">
-                            <img src="../../Images/Kobus.png" height="110px" width="100px">
-                        </div>
-                        <div class="user-details">
-                            <h3>Kobus Grobler</h3>
-                            <p>56 years old</p>
-                            <p>Parys, South Africa</p>
-                        </div>
-                    </div>
-                    <div class="case-study-general case-study">
-                        <h4>STOIGELA (PTY) LTD</h4>
-                        <h2>Zoilevium for General Well-Being</h2>
-                    </div>
-                </div>
-                <br>
-                <div class="testimonial-content">
-                    <div class="before-after">
-                        <div class="section before">
-                                <li>The person experienced numbness in his left arm, hand and fingers.</li>
-                                <li>He lost feeling in some fingers and experienced pins and needles sensation in other fingers and parts of his hand.</li>
-                                <li>After using Zoilevium Immune Support for 3 weeks the person made a full recovery. </li>
-                                <li>The numbness and pins and needles sensation had disappeared.</li>
-                                <li>He also had feeling back in his arm, hand and fingers.</li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
     <script src="../ContentWarning.js"></script>
@@ -677,4 +611,5 @@
     </div>
 
   </footer>
+  <script src="../SearchPages.js"></script>
 </html>

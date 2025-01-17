@@ -67,6 +67,11 @@ h1.animate {
     animation: moveRight 1s ease-out forwards; /* Define the animation */
 }
 
+
+.nav-link.active2 {
+    border-top: 1px solid;
+    border-bottom: 1px solid ;
+}
 /* Apply fade-in animation */
 .laboratory
 {
