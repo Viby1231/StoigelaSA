@@ -2,7 +2,7 @@ let navbarCache = null;
 
 function loadNavbar() {
     if (!navbarCache) {
-        return fetch('../Pages/navbarPages.html')
+        return fetch('navbarPages.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
