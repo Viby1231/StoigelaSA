@@ -1,10 +1,4 @@
-:root {
-    --font-basic: "Basic", sans-serif;
-    --font-quicksand: "Quicksand";
-    --main-bg-color: #213f97;
-    --primary-color: #1f246c;
-    --text-color: white;
-}
+
 
 #bgmask {
     background-color: rgba(255, 255, 255, 0.63);
