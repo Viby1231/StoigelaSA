@@ -218,21 +218,27 @@
         .table {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            border: 1px solid #ccc;
             border-radius: 4px;
             overflow: hidden;
+
+        }
+
+        .table-one {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-radius: 4px;
+            overflow: hidden;
+
         }
 
         .table-item,
         .table-item-ingredient {
             padding: 10px;
-            line-height: 1.5;
-            border-bottom: 1px solid #ccc;
+            line-height: 1;
+            padding-left: 20px;
         }
 
-        .table-item-ingredient {
-            border-left: 1px solid #f1f1f1;
-        }
+
 
         .second-page{
             box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
@@ -336,7 +342,7 @@
             pregnant
             FDA
             -->
-            <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
+
             <style>
               #navbar {
                   min-height: 120px; /* Adjust based on your navbar height */
@@ -355,34 +361,41 @@
         <div class="flex">
             <div class="column">
                 <img src="../../Images/Zoilevium PureGut Logo.jpg" class="product-image column" alt="Zoilevium Topical">
-                <h2>Composition:</h2>
-                <p>Each dosage of 15 drops contains the following ingredients:</p>
+                <h2>Supplement Facts:</h2>
+                <p><strong>Serving Size:</strong> 16 drops daily</p>
+                <p><strong>Servings Per Container:</strong>30 days</p>
+                <div class="table-one">
+                    <div class="table-item"></div>
+                    <div class="table-item-ingredient"></div>
+                    <div class="table-item-ingredient">%RDA</div>
+                    <div class="table-item">Zinc</div>
+                    <div class="table-item-ingredient">3.9 mg</div>
+                    <div class="table-item-ingredient">35%</div>
+                    <div class="table-item">Copper</div>
+                    <div class="table-item-ingredient">1.28 mg</div> 
+                    <div class="table-item-ingredient">142%</div>                      
+                </div>
+                <br>
+                <h2>Other ingredients:</h2>
                 <div class="table">
-                    <div class="table-item">Zinc (Zinc Citrate)</div>
-                    <div class="table-item-ingredient">5.82 mg
+                    <div class="table-item">Magnesium</div>
+                    <div class="table-item-ingredient">**
                     </div>
-                    <div class="table-item">Magnesium (Magnesium Sulphate)</div>
-                    <div class="table-item-ingredient">0.16 mg</div>
-                    <div class="table-item">Copper (Copper Sulphate)</div>
-                    <div class="table-item-ingredient">1.28 mg</div>
-                    <div class="table-item">Potassium (Potassium Hydroxide)</div>
-                    <div class="table-item-ingredient">1.86 mg</div>
+                    <div class="table-item">Chloride</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Sodium</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Potassium</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Sulphate</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Nitrate</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Citric Acid</div>
+                    <div class="table-item-ingredient">**</div>
+                    <p>** Daily value not established.</p>
                 </div>
 
-                <h2>Other ingredients</h2>
-                <div class="table">
-                    <div class="table-item">Citric Acid</div>
-                    <div class="table-item-ingredient">4.12 g</div>
-                    <div class="table-item">Low Sodium (Sodium Bicarbonate)
-                    </div>
-                    <div class="table-item-ingredient">0.49 mg</div>
-                    <div class="table-item">Sulphates </div>
-                    <div class="table-item-ingredient">41.62 mg</div>
-                    <div class="table-item">Nitrates</div>
-                    <div class="table-item-ingredient">0.38 mg</div>
-                    <div class="table-item">Distilled water</div>
-                    <div class="table-item-ingredient"></div>
-                </div>
 
                 <p>No flavouring, colourant, preservatives, sugar or sweetener added.</p>
                 <p>​
@@ -418,14 +431,6 @@
                     All of these properties may contribute to
                     counteracting the common symptoms of an
                     irritated gastrointestinal tract.</p>
-
-                    <script src="https://www.paypal.com/sdk/js?client-id=BAAfPr0LSS3EmNuZJDjQ2GX5fjR9sDGenFi9loAmzqe4VV6nd99nW5TQQn2gFfAWh5g4dKVTqGunarLY6U&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-                    <div id="paypal-container-96R3P27HJCJPC"></div>
-                    <script>
-                    paypal.HostedButtons({
-                        hostedButtonId: "96R3P27HJCJPC",
-                    }).render("#paypal-container-96R3P27HJCJPC")
-                    </script>
             </div>
         </div>
     </div>
@@ -479,8 +484,7 @@
             <span id="arrow5" class="arrow" onclick="toggleDropdown('dropdownContent5', 'dropbtn5', 'arrow5')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent5">
-            <p>Take 15 drops daily in a glass of water, or preferred consumable drink. Do not drink undiluted. Dosage may be divided into any amount preferred, as long as 15 drops per day are consumed. Relief may be experienced within 6 - 8 weeks after starting the regimen, as your body may need time to detox and adjust to the mineral supplement.
-                A 30 ml bottle will last for approximately 30 days.
+            <p>Shake bottle gently before use. Take 8 drops in the morning and 8 drops in the evening, in a glass of water, or any other preferred safe, consumable drink, after eating. Do not drink undiluted.
             </p>
         </div>
         <div>

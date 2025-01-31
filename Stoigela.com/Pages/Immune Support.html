@@ -215,21 +215,27 @@
         .table {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            border: 1px solid #ccc;
             border-radius: 4px;
             overflow: hidden;
+
+        }
+
+        .table-one {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-radius: 4px;
+            overflow: hidden;
+
         }
 
         .table-item,
         .table-item-ingredient {
             padding: 10px;
-            line-height: 1.5;
-            border-bottom: 1px solid #ccc;
+            line-height: 1;
+            padding-left: 20px;
         }
 
-        .table-item-ingredient {
-            border-left: 1px solid #ccc;
-        }
+
 
         .second-page h2 {
             margin: 10px 0;
@@ -257,7 +263,7 @@
             justify-content: center;
             width: 100%;
             height: 300px;
-            background-image: linear-gradient(to right, #00AEEF, #0D6585);
+            background-image: linear-gradient(to right, #213f97, #0D6585);
             text-align: center;
             color: white;
             align-content: center;
@@ -342,7 +348,7 @@
             FDA
             -->
             
-            <div style="height: 23px; background-color: #1288B3; width: 100%; border-bottom: solid #3BAF3E;"></div>
+
             <style>
               #navbar {
                   min-height: 120px; /* Adjust based on your navbar height */
@@ -362,33 +368,41 @@
             <div class="column">
                 <img src="../../Images/Zoilevium Immune Support Logo.jpg" class="product-image column"
                     alt="Zoilevium Topical">
-                <h2>Composition:</h2>
-                <p>Each dosage of 10 drops contains the following ingredients, all below RDA:</p>
-                <div class="table">
-                    <div class="table-item">Zinc (Zinc Citrate)</div>
-                    <div class="table-item-ingredient">≤ 4.99 mg
-                    </div>
-                    <div class="table-item">Magnesium (Magnesium Sulphate) </div>
-                    <div class="table-item-ingredient">≤ 0.14 mg</div>
-                    <div class="table-item">Copper (Copper Sulphate)</div>
-                    <div class="table-item-ingredient">≤ 1.10 mg</div>
+                <h2>Supplement Facts:</h2>
+                <p><strong>Serving Size:</strong> 10 drops daily</p>
+                <p><strong>Servings Per Container: </strong>45 days</p>
+                <div class="table-one">
+                    <div class="table-item"></div>
+                    <div class="table-item-ingredient"></div>
+                    <div class="table-item-ingredient">%RDA</div>
+                    <div class="table-item">Zinc</div>
+                    <div class="table-item-ingredient">2.6 mg</div>
+                    <div class="table-item-ingredient">23%</div>
+                    <div class="table-item">Copper</div>
+                    <div class="table-item-ingredient">0.9 mg</div> 
+                    <div class="table-item-ingredient">94%</div>                      
                 </div>
+                <br>
 
-                <h2>Other ingredients</h2>
+                <h2>Other ingredients:</h2>
                 <div class="table">
-                    <div class="table-item">Potassium (Potassium Hydroxide)</div>
-                    <div class="table-item-ingredient">≤ 1.60 mg</div>
-                    <div class="table-item">Citric Acid
-                    </div>
-                    <div class="table-item-ingredient">≤ 3.54 g</div>
-                    <div class="table-item">Low Sodium (Sodium Bicarbonate)</div>
-                    <div class="table-item-ingredient">≤ 0.42 mg</div>
-                    <div class="table-item">Sulphates</div>
-                    <div class="table-item-ingredient">≤ 35.71 mg</div>
-                    <div class="table-item">Nitrates</div>
-                    <div class="table-item-ingredient">≤ 0.33 mg</div>
                     <div class="table-item">Distilled water</div>
                     <div class="table-item-ingredient"></div>
+                    <div class="table-item">Magnesium</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Chloride</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Sodium</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Potassium</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Sulphate</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Nitrate</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">Citric Acid</div>
+                    <div class="table-item-ingredient">**</div>
+                    <div class="table-item">** Daily value not established</div>
                 </div>
                 <p>No flavouring, colourant, preservatives, sugar or sweetener added.</p>
                 <p>​
@@ -507,10 +521,7 @@
             <span id="arrow5" class="arrow" onclick="toggleDropdown('dropdownContent5', 'dropbtn5', 'arrow5')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent5">
-            <p>Take 10 drops daily in a glass of water, or any other preferred consumable drink. Do not drink undiluted.
-                Dosage may be divided into any amount preferred, as long as 10 drops per day are consumed. It will take
-                time for the minerals to have an effect on the body's functioning, therefor a period of 8 - 8 weeks
-                after starting the regimen is recommended, before any noticeable improvement may be expected. </p>
+            <p>Shake bottle gently before use. Take 5 drops in the morning and 5 drops in the evening, in a glass of water, or any other preferred safe, consumable drink, after eating. Do not drink undiluted.</p>
         </div>
 
     </div>

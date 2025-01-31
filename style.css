@@ -1,70 +1,58 @@
-
 :root {
-    --main-bg-color: #0D6585;
-    --text-color: white;
     --font-basic: "Basic", sans-serif;
     --font-quicksand: "Quicksand";
-    --primary-color: #11577E;
+    --main-bg-color: #213f97;
+    --primary-color: #1f246c;
+    --text-color: white;
 }
 
-.droparrow {
-    color: black;
+#bgmask {
+    background-color: rgba(255, 255, 255, 0.63);
+    align-content: center;
 }
-.nav-link.active2 {
-    border-top: 1px solid;
-    border-bottom: 1px solid ;
+
+#motto {
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    text-shadow: 1;
 }
-    /* Navbar and search box styling */
-    .navbar {
-        background-color: #f8f9fa;
-        padding: 15px;
-      }
 
-      .dropdown-toggle.active2{
-        border-top: 0;
-        border-bottom: 0;
-      }
-
-      #search-box {
-        border: 1px solid #ced4da; 
-        border-radius: 5px;
-        padding: 5px 10px;
-        margin-left: 20px;
-      }
-      .results-title {
-        font-size: 1.25em;
-        font-weight: bold;
-        margin-top: 15px;
-      }
-      .result {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-      .result a {
-        font-weight: bold;
-        text-decoration: none;
-        color: #333;
-      }
-
-.fullpage{
-    margin-left: 100px;
-    margin-right: 100px;
+#mottobg {
     display: flex;
-    flex-wrap: wrap;
-
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 300px;
+    background-image: url("Images/Ocean\ Bacground.png");
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.laboratory
-{
-    float: right;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    max-width: 45%;
-    border-radius: 20px;
+#mottobg div {
+    height: 450px;
+    padding-top: 50px;
 }
 
+#mottotitle {
+    font-family: "Bitter", serif;
+    font-weight: 1000;
+    font-size: 23px;
+}
+
+#products {
+    display: flex;
+}
+
+@keyframes moveRight {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
 
 body {
     margin: 0;
@@ -73,14 +61,34 @@ body {
     box-sizing: border-box;
 }
 
-.topofpagetitle {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: var(--main-bg-color);
+.button {
+    margin-top: 20px;
+    height: 300px;
     width: 100%;
-    padding: 50px 0;
+    text-align: center;
+    color: #3BAF3E;
+    background-color: #dbdbdb;
+    padding: 90px;
+    justify-items: center;
+}
+
+.button button {
+    width: 300px;
+    height: 50px;
+    background-color: #3BAF3E;
+    border: none;
     color: white;
+}
+
+.button button:hover {
+    background-color: #a3eba5;
+}
+
+.button h2 {
+    margin-top: 0;
+    font-size: 65px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
 }
 
 .coming-soon {
@@ -91,62 +99,9 @@ body {
     text-align: center;
 }
 
-.parallax {
-    background-image: url("Images/Water\ Bottle\ On\ Mountain\ Back.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content: center;
-    height: 650px;
-}
-
-.frame {
-    width: 370px;
-    height: 385px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    background: #eee;
-    margin: auto;
-    padding: 10px;
-    box-shadow: 0px 10px 5px  #666a6b;
-    box-shadow: #0D6585;
-
-
-}
-
-/* Set up the initial position and animation properties */
-h1.animate {
-    position: relative;
-    left: -100%; /* Start off-screen to the left */
-    animation: moveRight 1s ease-out forwards; /* Define the animation */
-}
-
-h2.animate {
-    position: relative;
-    left: -100%; /* Start off-screen to the left */
-    animation: moveRight 1.2s ease-out forwards; /* Define the animation */
-}
-
-/* Define the animation keyframes */
-@keyframes moveRight {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-.frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .description {
     margin-left: 50px;
-    background-color: white; /* Semi-transparent background */
+    background-color: white;
     color: rgb(0, 0, 0);
     padding: 10px;
     position: absolute;
@@ -159,111 +114,80 @@ h2.animate {
     border: solid rgb(0, 0, 0);
     border-width: 1px;
     text-align: center;
-
 }
 
-#products {
-    display: flex;
-}
-
-#motto {
-    text-align: center;
-    width: 100%;
-    color:whitesmoke;
-    text-shadow: 1;
-}
-
-#mottotitle {
-    font-family: "Bitter", serif;
-    font-weight: 1000;
-    font-size: 23px;
-}
-#mottobg {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    height: 300px;
-    background-image: url("Images/Ocean\ Bacground.png");
-    background-attachment:scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#mottobg div {
-    height: 450px;
-
-    padding-top: 50px;
-}
-
-.responsive-image {
-    width: 100%;
-    border-radius: 20px;
-    border: 4px solid;
-    border-color: #e4e4e4;
-
-}
-.button{
-    margin-top: 20px;
-    height: 300px;
-    width: 100%;
-    text-align: center;
-    color: #3BAF3E;
-    background-color: #dbdbdb;
-    padding: 90px;
-    justify-items: center;
-    
-}
-
-.button h2{
-    margin-top: 0;
-    font-size: 65px;
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 600;
-}
-
-.button button
-{
-
-    width: 300px;
-    height: 50px;
-
-    background-color: #3BAF3E;
-    border: none;
-    color: white;
-}
-
-.button button:hover {
-    background-color: #a3eba5;
-}
-
-
-#bgmask {
-
-    background-color: rgba(255, 255, 255, 0.63);
-    align-content: center;
-
-    
-}
-
-.dropdown-menu  h5{
+.dropdown-menu h5 {
     padding: 15px;
 }
 
-
-.titlesize {
-    font-weight: 100;
-    letter-spacing: -7px;
-    font-family: 'Times New Roman', Times, serif;
+.nav-link.active2 {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
-.slogan {
-    font-family: var(--font-quicksand);
-    font-weight: 100;
-    letter-spacing: 5px;
+.dropdown-toggle.active2 {
+    border-top: 0;
+    border-bottom: 0;
 }
+
+.droparrow {
+    color: black;
+}
+
+.frame {
+    width: 370px;
+    height: 385px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    background: #eee;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 10px 5px #666a6b;
+    box-shadow: #0D6585;
+}
+
+.frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.fullpage {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1.animate {
+    position: relative;
+    left: -100%;
+    animation: moveRight 1s ease-out forwards;
+}
+
+h2.animate {
+    position: relative;
+    left: -100%;
+    animation: moveRight 1.2s ease-out forwards;
+}
+
 h4 {
     font-size: 23px;
+}
+
+.laboratory {
+    float: right;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    max-width: 45%;
+    border-radius: 20px;
+}
+
+
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 15px;
 }
 
 p {
@@ -277,21 +201,95 @@ p {
     font-family: var(--font-poppins);
 }
 
-.paragraph1 ul{
+.paragraph1 h2 {
+    line-height: 70px;
+}
+
+.paragraph1 ul {
     line-height: 35px;
 }
 
-.paragraph1 h2{
-    line-height: 70px;
+.parallax {
+    background-image: url("Images/Water\ Bottle\ On\ Mountain\ Back.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    height: 650px;
 }
-.presents {
-    height: 100px; 
-    margin:10px;
-    justify-content: center; 
 
-    padding-top: 30px; color: black; 
-    font-size: 23px; 
+.presents {
+    height: 100px;
+    margin: 10px;
+    justify-content: center;
+    padding-top: 30px;
+    color: black;
+    font-size: 23px;
     font-family: 'Space Grotesk', sans-serif;
+}
+
+.responsive-image {
+    width: 100%;
+    border-radius: 20px;
+    border: 4px solid;
+    border-color: #e4e4e4;
+}
+
+.result {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.result a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.results-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#search-box {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.slogan {
+    font-family: var(--font-quicksand);
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.text-content {
+
+    border-radius: 10px;
+    padding:30px;
+    box-shadow: 0px 0px 20px 1px rgb(184, 184, 184);
+    margin-bottom: 50px;
+}
+
+.titlesize {
+    font-weight: 100;
+    letter-spacing: -7px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topofpagetitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to right, #213f97, #1288B3);
+    width: 100%;
+    padding: 50px 0;
+    color: white;
 }
 
 @media (max-width: 2000px) and (min-width: 1200px) {
