@@ -44,6 +44,7 @@
             display: flex;
             flex-direction: row;
             gap: 1.5rem;
+            
         }
 
         .before {
@@ -56,6 +57,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
             background-color: #8985b5b2;
+            border-radius: 20px;
         }
 
         .after {
@@ -69,6 +71,7 @@
             font-family: Arial, sans-serif;
             text-shadow: #000000;
             background-color: #8985b5b2;
+            border-radius: 20px;
         }
 
         .after-months {
@@ -355,6 +358,7 @@
             border-radius: 0px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
+            border-radius: 20px;
         }
 
         .user-info {
@@ -439,7 +443,6 @@
         }
 
         @media (max-width: 1200px) and (min-width: 350px) {
-
             .top-of-page-title {
                 flex-direction: column;
                 text-align: center;
@@ -471,11 +474,23 @@
                 display: flex;
                 align-self: center;
                 position: relative;
+                gap: 30px;
 
 
 
 
             }
+
+            .all-testimonials {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 0px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
             .user-info {
                 display: flex;
@@ -496,11 +511,14 @@
 
             .testimonial-container {
                 width: 100%;
-
+                background-attachment:fixed;
+                background-size:cover;
+                margin: auto;
+                border-radius: 0;
             }
 
             .section {
-                width: 95%;
+                width: 100%;
             }
 
 
@@ -518,7 +536,49 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                flex-wrap: wrap;
+                
+                gap: 0;
+            }
+
+
+
+            .content-warning-container {
+                height: 100%;
+            }
+
+            .content-warning-container img {
+                max-height: 60%;
+                background: #f5f5f5;
+                padding: 20px;
+            }
+
+            .before {
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+            padding: 1.5rem;
+            color: white;
+            text-shadow: #f3131300 2px 2px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            background-color: #8985b5b2;
+            margin-top: 2rem;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .after {
+            color: white;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            text-shadow: #000000;
+            background-color: #8985b5b2;
+            margin-bottom: 2rem;
+            border-radius: 0px 0px 10px 10px;
             }
 
 
@@ -557,7 +617,14 @@
         </div>
     </div>
     <div class="all-testimonials">
-
+        <div class="testimonials-description">
+            <div class="testimonials-description-text">
+                <h1>Zoilevium Testimonials</h1>
+                <h4>Testimonials and personal information (or the lack thereof) have been submitted by clients 
+                    on own volution. Grammar and spelling may have been adjusted for clarity purposes.</h4>
+        
+            </div>
+        </div>
 
         <div class="testimonial-container">
             <div class="testimonial">
@@ -624,7 +691,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        
         <div class="testimonial-container">
             <div class="doctors-report after ">
                 <h2>An extract of the doctor’s report of the lady above</h2>
@@ -661,7 +728,6 @@
                                     basis and have had no relapses since 2019 until current date (September 2023).
                                 </p>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -676,7 +742,7 @@
 
         </div>
 
-        <br>
+        
         <div class="testimonial-container">
             <div class="testimonial">
 
@@ -713,7 +779,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        
         <div class="testimonial-container">
             <div class="testimonial">
                 <div class="testimonial-content">
@@ -742,7 +808,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        
         <div class="testimonial-container">
             <div class="testimonial">
                 <div class="testimonial-content">
