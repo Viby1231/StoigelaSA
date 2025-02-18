@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <style>
+
+        .payment-form {
+            padding: 50px;
+            font-size: 20px;
+            width: 100%;
+            border-left: solid 2px grey;
+            
+            
+        }
+        
+        .payment-form  input{
+            line-height: 20px;
+            width: px;
+
+        }
+
+
+        .product-info{
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-info img{
+            display: flex;
+
+            max-width: 350px;
+            justify-self: right;
+            margin-right: 20%;
+
+        }
+
+        .payment-box {
+            padding: 100px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            width: 70%;
+            justify-self: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <style>
+        #navbar {
+            min-height: 120px; /* Adjust based on your navbar height */
+            background-color: #f8f9fa; /* Optional: Matches your navbar background */
+        }
+    </style>
+      <div id="navbar"></div>
+      <script src="navbarPages.js"></script>
+    <script type="text/javascript">
+        function shippingRequiredPayFast (formReference) {
+            let cont = true;
+            for( let i = 0; i < formReference.elements.length; i++ ) {
+                
+                if( formReference.elements[i].className !== 'shipping' )
+                continue;
+            
+            if( formReference.elements[i].name === 'line2' )
+            continue;
+        
+        if( !cont )
+        continue;
+    
+    if( formReference.elements[i].name === 'country' ) {
+        if( formReference.elements[i].selectedIndex === 0 ) {
+            cont = false;
+            alert ( 'Select a country' );
+        }
+    } else{
+        if( 0 === formReference.elements[i].value.length || /^\s*$/.test( formReference.elements[i].value ) ) {
+            cont = false;
+            alert ( 'Complete all the mandatory address fields' );
+        }
+    }
+}
+if( !cont ) {
+    return cont;
+}
+}
+</script>
+<script type="text/javascript">
+    function customQuantitiesPayFast (formReference) {
+        formReference['amount'].value = formReference['amount'].value * formReference['custom_quantity'].value;
+        return true;
+    }
+    </script>
+         <script type="text/javascript">
+             function actionPayFastJavascript ( formReference ) {
+                 let shippingValid = shippingRequiredPayFast( formReference );
+                 let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
+                 let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
+                 if (typeof shippingValid !== 'undefined' && !shippingValid) {
+                     return false;
+                    }
+                    if (typeof customValid !== 'undefined' && !customValid) {
+                        return false;
+                    }
+                    return true;
+                }
+                </script>
+            <div class="payment-box">
+                <div class="product-info">
+                    <img src="../../Images/Zoilevium Topical Logo.jpg">
+                </div>
+                <div class="payment-form">
+                    
+                    <form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" pattern="[0-9]" value="27020415">
+                        <input required type="hidden" name="amount" value="450">
+                        <table>
+                            <tr>
+                                <td><label for="custom_quantity">Quantity: </label></td>
+                                <td><input required id="custom_quantity" type="number" name="custom_quantity" value="1"></td>
+                            </tr>
+                        </table>
+                        
+                        <input required type="hidden" name="item_name" maxlength="255" value="Zoilevium Topical">
+                        <table>
+                            <tr>
+                                <td colspan="2"><span style="font-weight: bold;">Shipping Address</span></td>
+                            </tr>
+                            <tr>
+                                <td><span style="color:red;">*</span>&nbsp;Line 1</td>
+                                <td><input type="text" name="line1" class="shipping" value=""></td>
+                            </tr>
+                            <tr>
+                                <td>Line 2</td>
+                                <td><input type="text" name="line2" class="shipping" value=""></td>
+                            </tr>
+                    <tr>
+                    <td><span style="color:red;">*</span>&nbsp;City</td>
+                    <td><input type="text" class="shipping" name="city" value=""></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:red;">*</span>&nbsp;Province</td>
+                    <td><input type="text" class="shipping" name="region" value=""></td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:red;">*</span>&nbsp;Country</td>
+                    <td>
+                    <select name="country" class="shipping">
+                    <option value="" selected="selected">- Select -</option>
+                    <option value="South Africa">South Africa</option>
+        
+                    </select>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><span style="color:red;">*</span>&nbsp;Postal Code</td>
+                    <td><input type="number" name="code" class="shipping" value=""></td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                    <td colspan=2 align=center>
+                    <input class="buy-button" type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
+                    </td>
+                    </tr>
+                    </table>
+                    </form>
+            </div>
+                
+            </div>
+</body>
+</html>
