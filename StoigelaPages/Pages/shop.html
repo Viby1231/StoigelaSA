@@ -4,50 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Page</title>
+    <link rel="stylesheet" href="Footer.css">
+
     <style>
-
-        .payment-form {
+        .products {
             padding: 50px;
-            font-size: 20px;
-            width: 100%;
-            border-left: solid 2px grey;
-            
-            
         }
-        
-        .payment-form  input{
-            line-height: 20px;
-            width: px;
-
-        }
-
-
-        .product-info{
-
-            width: 100%;
-            height: 100%;
-        }
-
-        .product-info img{
-            display: flex;
-
-            max-width: 350px;
-            justify-self: right;
-            margin-right: 20%;
-
-        }
-
-        .payment-box {
-            padding: 100px;
-            margin: 10px;
-            display: flex;
-            flex-direction: row;
-            background-color: white;
-            width: 70%;
-            justify-self: center;
-            
-        }
-
     </style>
 </head>
 <body>
@@ -56,123 +18,244 @@
             min-height: 120px; /* Adjust based on your navbar height */
             background-color: #f8f9fa; /* Optional: Matches your navbar background */
         }
-    </style>
+        </style>
       <div id="navbar"></div>
       <script src="navbarPages.js"></script>
-    <script type="text/javascript">
-        function shippingRequiredPayFast (formReference) {
-            let cont = true;
-            for( let i = 0; i < formReference.elements.length; i++ ) {
-                
-                if( formReference.elements[i].className !== 'shipping' )
-                continue;
-            
-            if( formReference.elements[i].name === 'line2' )
-            continue;
-        
-        if( !cont )
-        continue;
-    
-    if( formReference.elements[i].name === 'country' ) {
-        if( formReference.elements[i].selectedIndex === 0 ) {
-            cont = false;
-            alert ( 'Select a country' );
-        }
-    } else{
-        if( 0 === formReference.elements[i].value.length || /^\s*$/.test( formReference.elements[i].value ) ) {
-            cont = false;
-            alert ( 'Complete all the mandatory address fields' );
-        }
-    }
-}
-if( !cont ) {
-    return cont;
-}
-}
-</script>
+
+      <div class="products">
+      <div id='collection-component-1740646838450'></div>
 <script type="text/javascript">
-    function customQuantitiesPayFast (formReference) {
-        formReference['amount'].value = formReference['amount'].value * formReference['custom_quantity'].value;
-        return true;
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
     }
-    </script>
-         <script type="text/javascript">
-             function actionPayFastJavascript ( formReference ) {
-                 let shippingValid = shippingRequiredPayFast( formReference );
-                 let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
-                 let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
-                 if (typeof shippingValid !== 'undefined' && !shippingValid) {
-                     return false;
-                    }
-                    if (typeof customValid !== 'undefined' && !customValid) {
-                        return false;
-                    }
-                    return true;
-                }
-                </script>
-            <div class="payment-box">
-                <div class="product-info">
-                    <img src="../../Images/Zoilevium Topical Logo.jpg">
-                </div>
-                <div class="payment-form">
-                    
-                    <form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                        <input required type="hidden" name="cmd" value="_paynow">
-                        <input required type="hidden" name="receiver" pattern="[0-9]" value="27020415">
-                        <input required type="hidden" name="amount" value="450">
-                        <table>
-                            <tr>
-                                <td><label for="custom_quantity">Quantity: </label></td>
-                                <td><input required id="custom_quantity" type="number" name="custom_quantity" value="1"></td>
-                            </tr>
-                        </table>
-                        
-                        <input required type="hidden" name="item_name" maxlength="255" value="Zoilevium Topical">
-                        <table>
-                            <tr>
-                                <td colspan="2"><span style="font-weight: bold;">Shipping Address</span></td>
-                            </tr>
-                            <tr>
-                                <td><span style="color:red;">*</span>&nbsp;Line 1</td>
-                                <td><input type="text" name="line1" class="shipping" value=""></td>
-                            </tr>
-                            <tr>
-                                <td>Line 2</td>
-                                <td><input type="text" name="line2" class="shipping" value=""></td>
-                            </tr>
-                    <tr>
-                    <td><span style="color:red;">*</span>&nbsp;City</td>
-                    <td><input type="text" class="shipping" name="city" value=""></td>
-                    </tr>
-                    <tr>
-                    <td><span style="color:red;">*</span>&nbsp;Province</td>
-                    <td><input type="text" class="shipping" name="region" value=""></td>
-                    </tr>
-                    <tr>
-                    <td><span style="color:red;">*</span>&nbsp;Country</td>
-                    <td>
-                    <select name="country" class="shipping">
-                    <option value="" selected="selected">- Select -</option>
-                    <option value="South Africa">South Africa</option>
-        
-                    </select>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td><span style="color:red;">*</span>&nbsp;Postal Code</td>
-                    <td><input type="number" name="code" class="shipping" value=""></td>
-                    </tr>
-                    </table>
-                    <table>
-                    <tr>
-                    <td colspan=2 align=center>
-                    <input class="buy-button" type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
-                    </td>
-                    </tr>
-                    </table>
-                    </form>
-            </div>
-                
-            </div>
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'zcqazs-rs.myshopify.com',
+      storefrontAccessToken: '342f694896d27e18c6bc7f5ed0210511',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: '279131717728',
+        node: document.getElementById('collection-component-1740646838450'),
+        moneyFormat: 'R%20%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px",
+          "width": "calc(25% - 20px)"
+        },
+        "img": {
+          "height": "calc(100% - 15px)",
+          "position": "absolute",
+          "left": "0",
+          "right": "0",
+          "top": "0"
+        },
+        "imgWrapper": {
+          "padding-top": "calc(75% + 15px)",
+          "position": "relative",
+          "height": "0"
+        }
+      },
+      "title": {
+        "font-family": "Avant Garde, sans-serif",
+        "font-weight": "normal"
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#4ea498"
+        },
+        "background-color": "#57b6a9",
+        ":focus": {
+          "background-color": "#4ea498"
+        },
+        "border-radius": "7px"
+      },
+      "price": {
+        "font-size": "17px"
+      },
+      "compareAt": {
+        "font-size": "14.45px"
+      },
+      "unitPrice": {
+        "font-size": "14.45px"
+      }
+    },
+    "contents": {
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        ":hover": {
+          "background-color": "#4ea498"
+        },
+        "background-color": "#57b6a9",
+        ":focus": {
+          "background-color": "#4ea498"
+        },
+        "border-radius": "7px"
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "26px",
+        "color": "#4c4c4c"
+      },
+      "price": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18px",
+        "color": "#4c4c4c"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      },
+      "unitPrice": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        ":hover": {
+          "background-color": "#4ea498"
+        },
+        "background-color": "#57b6a9",
+        ":focus": {
+          "background-color": "#4ea498"
+        },
+        "border-radius": "7px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#57b6a9",
+        ":hover": {
+          "background-color": "#4ea498"
+        },
+        ":focus": {
+          "background-color": "#4ea498"
+        }
+      }
+    }
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+</div>
 </body>
+<footer>
+    <div class="footer ">
+        <div class="footer-img">
+            <img src="../../Images/Stoigela Logo.png" height="200px" width="150px" class="bi m-5"
+                alt="Stoigela Logo">
+        </div>
+        <div>
+            <h4>Pages:</h4>
+            <a href="../../index.html">Home</a>
+            <a href="Research.html">Research</a>
+            <a href="Contact.html">Contact</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="PrivacyPolicy.html">Privacy Policy</a>
+        </div>
+        <div>
+            <h4>Product Pages:</h4>
+            <a href="Products.html">Products</a>
+            <a href="Topical.html">Topical</a>
+            <a href="PureGut.html">PureGut</a>
+            <a href="Immune Support.html">Immune Support</a>
+        </div>
+        <div>
+            <h4>Testimonials:</h4>
+            <a href="TestimonialsTopical.html">Topical</a>
+            <a href="TestimonialsPureGut.html">PureGut</a>
+            <a href="TestimonialsImmuneSupport.html">Immune Support</a>
+        </div>
+        <div>
+            <h4>Contact Us:</h4>
+            <h5>Send us an email:</h5>
+            <p>support@stoigela.co.za</p>
+            </br>
+            <h5>Our Address:</h5>
+            <p>Stoigela (Pty) Ltd</p>
+            <p>15 Melkbos Street</p>
+            <p>Grimbeekpark</p>
+            <p>South Africa</p>
+            <p>2531</p>
+        </div>
+    </div>
+    <div class="copyright-notice">
+        <p>© 2023 Stoigela</p>
+    </div>
+
+</footer>
 </html>

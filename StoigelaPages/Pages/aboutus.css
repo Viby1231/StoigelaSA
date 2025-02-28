@@ -121,6 +121,7 @@ h1.animate {
 
     .lists li {
         margin-right: 20px;
+        margin-left: -20px;
         font-size: 1rem;
     }
     .laboratory

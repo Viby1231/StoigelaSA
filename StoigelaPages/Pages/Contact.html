@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -77,8 +77,7 @@
 
         .container-email{
             margin-top: 2%;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
+            display: flex;
             gap: 20px;
             max-width: 100%;
             background-color: #fff;
@@ -200,11 +199,21 @@
 
         @media (max-width: 1200px) and (min-width: 300px) {
             .container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 2fr;
             }
-
+            .container-email {
+                display: flex;
+                flex-direction: row;
+                margin-top: 2%;
+                display: grid;
+                gap: 20px;
+                max-width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
             .get-in-touch {
-                order: 2;
+                order:1;
             }
 
             .other-ways {
@@ -214,12 +223,15 @@
             .form-container {
                 margin: 10px;
                 order: 0;
-                width: 110%;
+                width: 100%;
                 align-self: center;
             }
 
             .flex {
-                margin-left: 0;
+                display: flex;
+
+            margin-left: 0;
+                
             }
 
             h1 {
@@ -260,12 +272,7 @@
     </style>
 </head>
 <body>
-              <!--
-            IBD
-            Crohn
-            pregnant
-            FDA
-            -->
+
             
     <div id="navbar"></div>
     <script src="navbarPages.js"></script>
@@ -285,7 +292,7 @@
 
         <div class="flex other-ways">
             <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
-                <input type="hidden" name="access_key" value="41a768c7-a9be-4418-abf2-72befc4582f3">
+                <input type="hidden" name="access_key" value="09217e3b-7de3-4aff-bfc7-96c8c77c606f">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
     

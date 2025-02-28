@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoilevium Topical</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Immune Support</title>
     <link rel="stylesheet" href="Footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,6 +19,7 @@
             align-content: center;
         }
 
+
         .droparrow {
     color: black;
 }
@@ -27,10 +27,9 @@
         @font-face {
             font-family: 'Neuropol';
             /* Name your font family */
-            src: url(/Fonts/NEUROPOL.ttf);
+            src: url(../../Fonts/NEUROPOL.ttf);
             /* Locate the .ttf file within your directory*/
         }
-
         h1.animate {
             position: relative;
             left: -100%;
@@ -44,6 +43,13 @@
             right: -100%;
             /* Start off-screen to the left */
             animation: moveLeft 1s ease-out forwards;
+        }
+
+        h2.animate2 {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1.1s ease-out forwards;
         }
 
         h5.animate{
@@ -139,12 +145,13 @@
 
             overflow: hidden;
             /* Hide overflow */
-            transition: max-height 0.1s ease-in, padding 0.1s ease-out;
+            transition: max-height 0.1s ease, padding 0.1s ease;
             /* Smooth transition */
         }
 
-        .dropdown-content p{
-            font-size: 16px;
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            /* Light gray on hover */
         }
 
         .dropdown-content.show {
@@ -154,19 +161,10 @@
             /* Padding for the expanded content */
         }
 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            /* Light gray on hover */
-        }
-
-        .dropdown-menu h5 {
-            padding: 15px;
-        }
 
         .container {
 
             margin-top: 40px;
-
         }
 
         .container h2,
@@ -195,11 +193,10 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
 
         .column li {
-            font-size: 18px;
+            font-size: 1rem;
         }
 
         .column h2,
@@ -210,7 +207,7 @@
 
         .column p {
             margin-top: 20px;
-            font-size: 18px;
+            font-size: 1rem;
             text-align: justify;
 
         }
@@ -240,23 +237,23 @@
 
 
 
-        .second-page{
-            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
-            margin-bottom: 100px;
-            border-radius: 0;
-            width: 100%;
-        }
-
         .second-page h2 {
             margin: 10px 0;
 
 
         }
 
+        .second-page {
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 100px;
+            border-radius: 0;
+            width: 100%;
+        }
+
         .second-page p,
         .second-page ul {
             margin: 0 0 20px 0;
-            font-size: 18px;
+            font-size: 1rem;
             text-align: justify;
         }
 
@@ -266,7 +263,7 @@
             justify-content: center;
             width: 100%;
             height: 300px;
-            background-image: linear-gradient(to right, #329542, #0D6585);
+            background-image: linear-gradient(to right, #213f97, #0D6585);
             text-align: center;
             color: white;
             align-content: center;
@@ -282,12 +279,21 @@
 
         .top-of-page-title h2 {
             font-family: "Neuropol";
+            margin-bottom: -20px;
             padding-left: 80px;
             font-size: 56px;
             font-weight: 10;
             letter-spacing: 5px;
+            line-height: 70px;
         }
 
+        h5 {
+            padding: 20px;
+        }
+
+        .footer h5 {
+            padding: 0%;
+        }
 
         @media (max-width: 1200px) {
             .flex {
@@ -302,19 +308,21 @@
 
             .second-page p,
             .second-page ul {
-                font-size: 16px;
+                font-size: 1rem;
             }
 
             .column p {
-                font-size: 16px;
+                font-size: 1rem;
+                padding: 0;
             }
 
             .column li {
-                font-size: 16px;
+                font-size: 1rem;
             }
 
             .top-of-page-title h1 {
                 font-size: 34px;
+                line-height: 0px;
 
             }
 
@@ -324,7 +332,7 @@
 
             .top-of-page-title h2 {
                 font-size: 34px;
-
+              line-height: 50px;
             }
         }
     </style>
@@ -342,6 +350,7 @@
             pregnant
             FDA
             -->
+            
 
             <style>
               #navbar {
@@ -351,36 +360,39 @@
           </style>
             <div id="navbar"></div>
             <script src="navbarPages.js"></script>
-
     <div class="top-of-page-title">
         <h1 class="animate">ZOILEVIUM</h1>
-        <h2 class="animate">PUREGUT</h2>
-        <h5 class="animate">IBS AND GUT HEALTH SUPPORT</h5>
+        <h2 class="animate">IMMUNE</h2>
+        <h2 class="animate2">SUPPORT</h2>
+        <h5 class="animate">FOR IMPROVED GENERAL WELL-BEING</h5>
     </div>
     <div class="container">
         <div class="flex">
             <div class="column">
-                <img src="../../Images/Zoilevium PureGut Logo.jpg" class="product-image column" alt="Zoilevium Topical">
+                <img src="../../Images/Zoilevium Immune Support Logo.jpg" class="product-image column"
+                    alt="Zoilevium Topical">
                 <h2>Supplement Facts:</h2>
-                <p><strong>Serving Size:</strong> 16 drops daily</p>
-                <p><strong>Servings Per Container: </strong>30 days</p>
+                <p><strong>Serving Size:</strong> 10 drops daily</p>
+                <p><strong>Servings Per Container: </strong>45 days</p>
                 <div class="table-one">
                     <div class="table-item"></div>
                     <div class="table-item-ingredient"></div>
                     <div class="table-item-ingredient">%RDA</div>
                     <div class="table-item">Zinc</div>
-                    <div class="table-item-ingredient">3.9 mg</div>
-                    <div class="table-item-ingredient">35%</div>
+                    <div class="table-item-ingredient">2.6 mg</div>
+                    <div class="table-item-ingredient">23%</div>
                     <div class="table-item">Copper</div>
-                    <div class="table-item-ingredient">1.28 mg</div> 
-                    <div class="table-item-ingredient">142%</div>                      
+                    <div class="table-item-ingredient">0.9 mg</div> 
+                    <div class="table-item-ingredient">94%</div>                      
                 </div>
                 <br>
+
                 <h2>Other ingredients:</h2>
                 <div class="table">
+                    <div class="table-item">Distilled water</div>
+                    <div class="table-item-ingredient"></div>
                     <div class="table-item">Magnesium</div>
-                    <div class="table-item-ingredient">**
-                    </div>
+                    <div class="table-item-ingredient">**</div>
                     <div class="table-item">Chloride</div>
                     <div class="table-item-ingredient">**</div>
                     <div class="table-item">Sodium</div>
@@ -393,47 +405,71 @@
                     <div class="table-item-ingredient">**</div>
                     <div class="table-item">Citric Acid</div>
                     <div class="table-item-ingredient">**</div>
-                    <p>** Daily value not established.</p>
+                    <div class="table-item">** Daily value not established</div>
                 </div>
-
-
                 <p>No flavouring, colourant, preservatives, sugar or sweetener added.</p>
                 <p>​
-                    Zoilevium Puregut has been tested for SANS 241 compliance by Bureau Veritas and was found compliant.
-                    SANS 241 Drinking Water Specification states the minimum requirements for potable water to be
-                    considered safe for human consumption. These requirements include the microbiological, chemical and
-                    physical properties of the water.</p>
-            </div>
 
+                    Zoilevium Immune Support has been tested for SANS 241
+                    compliance by Bureau Veritas and was found compliant.
+                    SANS 241 Drinking Water Specification states the
+                    minimum requirements for potable water to be
+                    considered safe for human consumption. These
+                    requirements include the microbiological, chemical and
+                    physical properties of the water.
+                </p>
+            </div>
             <div class="column">
-                <h1 style="text-align: center;">Zoilevium PureGut</h1>
-                <p>Zoilevium PureGut is a mineral-based, inorganic, antimicrobial compound. The modes of action that it relies on, to assist with gut-related problems and conditions like IBS, are found in the inherently acknowledged properties of the trace minerals it comprises. The benefits of minerals, as supported by SAHPRA in South Africa:</p>
+                <h1 style="text-align: center;">Zoilevium Immune Support</h1>
+                <p>Zoilevium Immune Support assists the body in fortifying one's immune system. An optimized immune
+                    system is crucial for maintaining overall health, as it protects the body from infections, reduces
+                    the risk of chronic diseases, and ensures that the body's defences are strong enough to
+                    pre-emptively fight off illnesses effectively. Therefore, preventing illness, before curing illness,
+                    becomes necessary. A robust immune system helps in faster recovery, better resilience against
+                    stress, and overall improved well-being.</p>
+                <p>The modes of action that Zoilevium Immune Support relies on, to assist with strengthening the immune
+                    system, are found in the inherently acknowledged properties of the trace minerals it comprises. The
+                    benefit of minerals, as supported by SAHPRA in South Africa:</p>
                 <ul>
                     <li>
-                        <strong>Copper:</strong> It has anti-inflammatory properties, promotes the formation of red
-                        blood cells, helps with the absorption of iron in the body, it has strong antibacterial
-                        properties, it protects cells from damage and helps to produce and repair connective tissue.
+                        <strong> Zinc:</strong> Helps strengthen the immune system, promotes digestive health, has
+                        antibacterial properties, contributes to normal cognitive function, contributes to normal DNA
+                        synthesis, helps with macronutrient metabolism, helps maintain normal testosterone levels in the
+                        blood, helps protect cells from oxidative stress, assists in the maintenance of good health.
                     </li>
                     <br />
                     <li>
-                        <strong>Zinc:</strong> Supports the body’s immune function, it promotes digestive health, it has
-                        antibacterial properties, it helps to normalise macro-nutrient metabolism, it supports
-                        connective tissue formation, it also helps the body to metabolise carbohydrates, fats and
-                        proteins.
+                        <strong>Magnesium:</strong> Has anti-inflammatory properties, contributes to tissue formation,
+                        contributes to normal energy-yielding metabolism, contributes to the normal functioning of the
+                        nervous system, helps with the reduction of tiredness and fatigue, helps maintain normal muscle
+                        function, contributes to normal psychological function, assists in the maintenance of good
+                        health.
                     </li>
                     <br />
                     <li>
-                        <strong>Magnesium:</strong> It has anti-inflammatory properties, it helps metabolise
-                        carbohydrates, fats and proteins and contributes to tissue formation.
+                        <strong>Copper: </strong>Has anti-inflammatory properties, promotes formation of red blood
+                        cells, has antibacterial properties, protects cells from damage and oxidative stress,
+                        contributes to normal energy-yielding metabolism, contributes to the normal function of the
+                        immune system, contributes to normal skin and hair pigmentation.
+                    </li>
+                    <br />
+                    <li>
+                        <strong>Potassium: </strong> Contributes to normal function of the nervous system, contributes
+                        to normal muscle function, contributes to the maintenance of normal blood pressure.
+                    </li>
+                    <br />
+                    <li>
+                        <strong>Citric acid:</strong> Assists in absorbing nutrients.
                     </li>
                 </ul>
                 <p>​​
-                    All of these properties may contribute to
-                    counteracting the common symptoms of an
-                    irritated gastrointestinal tract.</p>
+                    All of these properties may contribute to promoting the reinforcement of the body’s natural immune
+                    system.
+                </p>
             </div>
         </div>
     </div>
+
     <div class="container second-page column">
         <div class="dropdown">
             <button id="dropbtn1" class="dropbtn"
@@ -441,8 +477,8 @@
             <span id="arrow1" class="arrow" onclick="toggleDropdown('dropdownContent1', 'dropbtn1', 'arrow1')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent1">
-            <p>What gives Zoilevium Puregut its beneficial synergistic qualities, are the unique mineral combinations,
-                formulations and production processes, individually tailored for this product.</p>
+            <p>What gives Zoilevium Immune Support its beneficial synergistic qualities, are the unique mineral
+                combinations, formulations and production processes, individually tailored for this product.</p>
             <ul>
                 <li>A varied diet is the most effective and safe way to achieve good nutrition, health, body composition
                     as well as mental and physical performance.</li>
@@ -455,7 +491,10 @@
             <span id="arrow2" class="arrow" onclick="toggleDropdown('dropdownContent2', 'dropbtn2', 'arrow2')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent2">
-            <p>Zoilevium Puregut is a combination of above-mentioned minerals with their respective advantages, which may assist in alleviating the symptoms of IBS and improve general gut health related conditions, as the properties listed above speak directly to the symptoms of these ailments. What gives Zoilevium Puregut its beneficial synergistic qualities, are the unique mineral combinations, formulations and production processes, individually tailored for this product.</p>
+            <p>Zoileviium Immune Support is a combination of above-mentioned minerals with their respective advantages,
+                which may assist in improved general health and well-being. What gives Zoilevium Immune Support its
+                beneficial synergistic qualities, are the unique mineral combinations, formulations and production
+                processes, individually tailored for this product.</p>
         </div>
 
         <div class="dropdown">
@@ -464,7 +503,7 @@
             <span id="arrow3" class="arrow" onclick="toggleDropdown('dropdownContent3', 'dropbtn3', 'arrow3')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent3">
-            <p>Zoilevium Puregut is contra-indicated in persons who are hypersensitive or allergic to any of the
+            <p>Zoilevium Immune Support is contra-indicated in persons who are hypersensitive or allergic to any of the
                 ingredients.</p>
         </div>
 
@@ -474,7 +513,8 @@
             <span id="arrow4" class="arrow" onclick="toggleDropdown('dropdownContent4', 'dropbtn4', 'arrow4')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent4">
-            <p>If you are taking medication/-s for Crohn's and IBS, we do not advise that you stop the medication. Zoilevium Puregut is meant to be used as supportive therapy. Do not use when pregnant and/or breastfeeding.</p>
+            <p>Zoilevium Immune Support is meant to be used as a supportive therapy to improve general health and
+                well-being and is not intended to replace a healthy diet or eating habits.</p>
         </div>
 
         <div class="dropdown">
@@ -484,12 +524,9 @@
             <span id="arrow5" class="arrow" onclick="toggleDropdown('dropdownContent5', 'dropbtn5', 'arrow5')">▼</span>
         </div>
         <div class="dropdown-content" id="dropdownContent5">
-            <p>Shake bottle gently before use. Take 8 drops in the morning and 8 drops in the evening, in a glass of water, or any other preferred safe, consumable drink, after eating. Do not drink undiluted.
-            </p>
+            <p>Shake bottle gently before use. Take 5 drops in the morning and 5 drops in the evening, in a glass of water, or any other preferred safe, consumable drink, after eating. Do not drink undiluted.</p>
         </div>
-        <div>
 
-        </div>
     </div>
 
     <footer>
@@ -537,8 +574,8 @@
         </div>
 
     </footer>
-    <script src="../../Stoigela.com/Dropdown.js"></script>
     <script src="../SearchPages.js"></script>
+    <script src="../../StoigelaPages/Dropdown.js"></script>
 </body>
 
 </html>
