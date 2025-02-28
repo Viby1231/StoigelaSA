@@ -31,23 +31,37 @@
 
         }
 
+        .description {
+            width: 30%;
+            text-align: justify;
+            margin: auto;
+        }
+
+        .price {
+            text-align: center;
+            margin-right: 220px;
+            color: #50a8eb;
+            margin-top: 10px;
+        }
+
         tr {
             display: flex;
             flex-direction: column;
         }
 
         tr input {
-            width: 400px;
+            width: 340px;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border-color: rgba(128, 128, 128, 0.476);
         }
 
-        button {
-            width: 180px;
-            height: 60px;
-            background-image: url("https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 128, 0, 0);
-            border: 0;
+        .product-info button {
+            display: flex;
+            margin:auto;
+            margin-top: 60px;
+            font-size: 30px;
+            
         }
 
         .product-info{
@@ -59,7 +73,7 @@
         .product-info img{
             display: flex;
 
-            width: 70%;
+            width: 30%;
             justify-self: center;
 
 
@@ -77,8 +91,14 @@
             
         }
 
+        @media (max-width: 1300px) and (min-width: 900px) {
+            .payment-form {
+        border-left: 0;
 
-        @media (max-width: 1200px) and (min-width: 350px) {
+    }  
+        }
+
+        @media (max-width: 900px) and (min-width: 350px) {
 
         .payment-box {
             padding: 0;
@@ -90,9 +110,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        tr input {
-        width: 95%;
-    }
+
 
     .payment-form {
         border-left: 0;
@@ -102,9 +120,11 @@
     .product-info img{
             display: flex;
 
-            width: 70%;
+            width: 60%;
             justify-self: center;
             margin-right: 0;
+            margin-top: 30px;
+            margin-bottom: 30px;
 
         }
 
@@ -120,127 +140,33 @@
         </style>
       <div id="navbar"></div>
       <script src="navbarPages.js"></script>
-    <div class="body-div">
-      <script type="text/javascript">
-          function shippingRequiredPayFast (formReference) {
-            let cont = true;
-            for( let i = 0; i < formReference.elements.length; i++ ) {
-                
-                if( formReference.elements[i].className !== 'shipping' )
-                continue;
-            
-            if( formReference.elements[i].name === 'line2' )
-            continue;
-        
-        if( !cont )
-        continue;
-    
-    if( formReference.elements[i].name === 'country' ) {
-        if( formReference.elements[i].selectedIndex === 0 ) {
-            cont = false;
-            alert ( 'Select a country' );
-        }
-    } else{
-        if( 0 === formReference.elements[i].value.length || /^\s*$/.test( formReference.elements[i].value ) ) {
-            cont = false;
-            alert ( 'Complete all the mandatory address fields' );
-        }
-    }
-}
-if( !cont ) {
-    return cont;
-}
-}
-</script>
-<script type="text/javascript">
-    function customQuantitiesPayFast (formReference) {
-        formReference['amount'].value = formReference['amount'].value * formReference['custom_quantity'].value;
-        return true;
-    }
-    </script>
-         <script type="text/javascript">
-             function actionPayFastJavascript ( formReference ) {
-                 let shippingValid = shippingRequiredPayFast( formReference );
-                 let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
-                 let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
-                 if (typeof shippingValid !== 'undefined' && !shippingValid) {
-                     return false;
-                    }
-                    if (typeof customValid !== 'undefined' && !customValid) {
-                        return false;
-                    }
-                    return true;
-                }
-                </script>
-            <div class="payment-box">
-                <div class="product-info">
-                    <img src="../../Images/Zoilevium Topical Logo.jpg">
+      <div class="body-div">
+          <div class="payment-box">
+                <div id="cart">
+                  <h2>Shopping Cart</h2>
+                  <div id="cart-items"></div>
+                  <p>Total: <span id="cart-total">R0.00</span></p>
+              </div>
+
+
+              
+              <div class="product-info">
+                  <img src="../../Images/Zoilevium Topical Logo.jpg">
+                  <div class="price"><h1>R420.00</h1></div>
+                  <div class="description"><p>Zoilevium Topical is a mineral-based antimicrobial and disinfectant compound that has the properties and modes of action of a broad-spectrum, inorganic, metallo-antibiotic.</p></div>
+                  <button onclick="addToCart('Zoilevium Topical', 5)">Add to Cart</button>
+                  <button onclick="addToCart('Zoilevium Immune support', 6)">Add to Cart</button>
+                  
+                  <button onclick="clearCart()">Clear Cart</button>
+
                 </div>
-                <div class="payment-form">
-                    
-                    <form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                        <input required type="hidden" name="cmd" value="_paynow">
-                        <input required type="hidden" name="receiver" pattern="[0-9]" value="27020415">
-                        <input required type="hidden" name="amount" value="10">
-                        <table>
-                            <tr>
-                                <td><label for="custom_quantity">Quantity: </label></td>
-                                <td><input required id="custom_quantity" type="number" name="custom_quantity" value="1"></td>
-                            </tr>
-                        </table>
-                        
-                        <input required type="hidden" name="item_name" maxlength="255" value="Zoilevium Topical">
-                        <table>
-                            <tr>
-                                <td colspan="2"><span style="font-weight: bold;">Shipping Address</span></td>
-                            </tr>
-                            <tr>
-                                <td><span style="color:red;">*</span>&nbsp;Line 1</td>
-                                <td><input type="text" name="line1" class="shipping" value=""></td>
-                            </tr>
-                            <tr>
-                                <td>Line 2</td>
-                                <td><input type="text" name="line2" class="shipping" value=""></td>
-                            </tr>
-                            
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;City</td>
-                        <td><input type="text" class="shipping" name="city" value=""></td>
-                    </tr>
-                    <hr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Province</td>
-                        <td><input type="text" class="shipping" name="region" value=""></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Country</td>
-                        <td>
-                            <select name="country" class="shipping">
-                                <option value="" selected="selected">- Select -</option>
-                                <option value="South Africa">South Africa</option>
-        
-                    </select>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td><span style="color:red;">*</span>&nbsp;Postal Code</td>
-                    <td><input type="number" name="code" class="shipping" value=""></td>
-                    </tr>
-                    </table>
-                    <table>
-                    <tr>
-                    <td colspan=2 align=center>
-                    <br>
-                    <button class="buy-button" type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
-                    </td>
-                    </tr>
-                    </table>
-                    </form>
-            </div>
+                </div>
+                
                 
             </div>
         </div>
+
+        <script src="shoppingCart.js"></script>
 </body>
 <footer>
     <div class="footer ">

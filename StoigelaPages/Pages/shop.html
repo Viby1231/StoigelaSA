@@ -5,11 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Page</title>
     <link rel="stylesheet" href="Footer.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
     <style>
         .products {
             padding: 50px;
         }
+
+        h1.animate {
+            position: relative;
+            left: -100%;
+            /* Start off-screen to the left */
+            animation: moveRight 1s ease-out forwards;
+            /* Define the animation */
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .droparrow {
+    color: black;
+}
+
+
+
+.dropdown-menu  h5{
+          padding: 15px;
+          }
+
+                .nav-link.active2 {
+      border-top: 1px solid;
+      border-bottom: 1px solid ;
+}
+        .top-of-page-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+            background-image: linear-gradient(to right, #213f97, #0D6585);
+            text-align: center;
+            color: white;
+            align-content: center;
+        }
+
+        .top-of-page-title h1 {
+          font-size: 80px;
+            font-weight: 500;
+            font-family: 'Times new roman', Times, serif;
+            text-shadow: rgb(43, 43, 43) 0px 1px 10px;
+            color: #f0f0f0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -21,197 +81,195 @@
         </style>
       <div id="navbar"></div>
       <script src="navbarPages.js"></script>
-
-      <div class="products">
-      <div id='collection-component-1740646838450'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'zcqazs-rs.myshopify.com',
-      storefrontAccessToken: '342f694896d27e18c6bc7f5ed0210511',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '279131717728',
-        node: document.getElementById('collection-component-1740646838450'),
-        moneyFormat: 'R%20%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
+      <div class="top-of-page-title">
+        <h1 class="titlesize animate">Stoigela Shop</h1>
+        <h2 class="top-of-page"></h2>
+      </div>
+      <br>
+      <div id='collection-component-1740742376262'></div>
+      <script type="text/javascript">
+      /*<![CDATA[*/
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'zcqazs-rs.myshopify.com',
+            storefrontAccessToken: '342f694896d27e18c6bc7f5ed0210511',
+          });
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('collection', {
+              id: '279131717728',
+              node: document.getElementById('collection-component-1740742376262'),
+              moneyFormat: 'R%20%7B%7Bamount%7D%7D',
+              options: {
+        "product": {
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "calc(25% - 20px)",
+                "margin-left": "20px",
+                "margin-bottom": "50px",
+                "width": "calc(25% - 20px)"
+              }
+            },
+            "title": {
+              "font-family": "Avant Garde, sans-serif",
+              "font-weight": "normal"
+            },
+            "button": {
+              ":hover": {
+                "background-color": "#359e38"
+              },
+              "background-color": "#3baf3e",
+              ":focus": {
+                "background-color": "#359e38"
+              },
+              "border-radius": "7px"
+            },
+            "price": {
+              "font-size": "17px",
+              "color": "#434343"
+            },
+            "compareAt": {
+              "font-size": "14.45px",
+              "color": "#434343"
+            },
+            "unitPrice": {
+              "font-size": "14.45px",
+              "color": "#434343"
+            }
+          },
+          "buttonDestination": "modal",
+          "contents": {
+            "options": false
+          },
+          "text": {
+            "button": "View product"
+          }
         },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
+        "productSet": {
+          "styles": {
+            "products": {
+              "@media (min-width: 601px)": {
+                "margin-left": "-20px"
+              }
+            }
+          }
         },
-        "imgWrapper": {
-          "padding-top": "calc(75% + 15px)",
-          "position": "relative",
-          "height": "0"
+        "modalProduct": {
+          "contents": {
+            "img": false,
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
+          },
+          "styles": {
+            "product": {
+              "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px"
+              }
+            },
+            "button": {
+              ":hover": {
+                "background-color": "#359e38"
+              },
+              "background-color": "#3baf3e",
+              ":focus": {
+                "background-color": "#359e38"
+              },
+              "border-radius": "7px"
+            },
+            "title": {
+              "font-family": "Helvetica Neue, sans-serif",
+              "font-weight": "bold",
+              "font-size": "26px",
+              "color": "#4c4c4c"
+            },
+            "price": {
+              "font-family": "Helvetica Neue, sans-serif",
+              "font-weight": "normal",
+              "font-size": "18px",
+              "color": "#4c4c4c"
+            },
+            "compareAt": {
+              "font-family": "Helvetica Neue, sans-serif",
+              "font-weight": "normal",
+              "font-size": "15.299999999999999px",
+              "color": "#4c4c4c"
+            },
+            "unitPrice": {
+              "font-family": "Helvetica Neue, sans-serif",
+              "font-weight": "normal",
+              "font-size": "15.299999999999999px",
+              "color": "#4c4c4c"
+            },
+            "description": {
+              "font-size": "17px"
+            }
+          },
+          "text": {
+            "button": "Add to cart"
+          }
+        },
+        "option": {},
+        "cart": {
+          "styles": {
+            "button": {
+              ":hover": {
+                "background-color": "#359e38"
+              },
+              "background-color": "#3baf3e",
+              ":focus": {
+                "background-color": "#359e38"
+              },
+              "border-radius": "7px"
+            }
+          },
+          "text": {
+            "total": "Subtotal",
+            "button": "Checkout"
+          }
+        },
+        "toggle": {
+          "styles": {
+            "toggle": {
+              "background-color": "#3baf3e",
+              ":hover": {
+                "background-color": "#359e38"
+              },
+              ":focus": {
+                "background-color": "#359e38"
+              }
+            }
+          }
         }
       },
-      "title": {
-        "font-family": "Avant Garde, sans-serif",
-        "font-weight": "normal"
-      },
-      "button": {
-        ":hover": {
-          "background-color": "#4ea498"
-        },
-        "background-color": "#57b6a9",
-        ":focus": {
-          "background-color": "#4ea498"
-        },
-        "border-radius": "7px"
-      },
-      "price": {
-        "font-size": "17px"
-      },
-      "compareAt": {
-        "font-size": "14.45px"
-      },
-      "unitPrice": {
-        "font-size": "14.45px"
-      }
-    },
-    "contents": {
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
+            });
+          });
         }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        ":hover": {
-          "background-color": "#4ea498"
-        },
-        "background-color": "#57b6a9",
-        ":focus": {
-          "background-color": "#4ea498"
-        },
-        "border-radius": "7px"
-      },
-      "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
-      },
-      "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      },
-      "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-      "button": {
-        ":hover": {
-          "background-color": "#4ea498"
-        },
-        "background-color": "#57b6a9",
-        ":focus": {
-          "background-color": "#4ea498"
-        },
-        "border-radius": "7px"
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "background-color": "#57b6a9",
-        ":hover": {
-          "background-color": "#4ea498"
-        },
-        ":focus": {
-          "background-color": "#4ea498"
-        }
-      }
-    }
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
-</div>
+      })();
+      /*]]>*/
+      </script>
+      </div>
+  <script src="../SearchPages.js"></script>
 </body>
 <footer>
     <div class="footer ">
