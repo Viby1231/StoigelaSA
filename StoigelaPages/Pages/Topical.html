@@ -31,6 +31,47 @@
     color: black;
 }
 
+.photo-gallery {
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+    background-color: #66cc5c;    background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.gallery-thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-preview {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-preview img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
         h2.animate {
             position: relative;
             right: -100%;
@@ -103,6 +144,28 @@
             transition: font-size 0.6s ease,
                 font-weight 0.1s ease-in-out,
                 transform 0.1s ease;
+
+        }
+
+        .shop-button {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-decoration: 0;
+        }
+
+        .shop-button button {
+            background-color: #3BAF3E;
+            width: 200px;
+            height: 60px;
+            border: 0;
+            border-radius: 20px;
+            color: #f0f0f0;
+            font-size: 25px;
+        }
+        .shop-button button:hover {
+            background-color: #66cc5c;
 
         }
 
@@ -416,8 +479,21 @@
                     tissue, promotes wound healing.</p>
                 <p>All of these properties serve to promote the disinfection, and healing of open scrapes and wounds.
                 </p>
+                <a class="shop-button" href="shop.html"><button >Shop Now</button></a>
             </div>
         </div>
+        <div class="photo-gallery">
+            <div class="gallery-thumbnails">
+                <img src="../../Images/Zoilevium-Topical-Bottle.jpg" alt="Image 1" onclick="showImage(this)">
+                <img src="../../Images/Zoilevium-Topical-Bottle-Bumped-Over.jpg" alt="Image 2" onclick="showImage(this)">
+                <img src="../../Images/Topical spray use.jpg" alt="Image 3" onclick="showImage(this)">
+                <img src="../../Images/Topical Spray Showcase.jpg" alt="Image 4" onclick="showImage(this)">
+            </div>
+            <div class="gallery-preview">
+                <img id="largeImage" src="../../Images/Zoilevium-Topical-Bottle.jpg" alt="Large Preview">
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="container second-page">
@@ -529,6 +605,12 @@
         </div>
 
     </footer>
+    <script>
+        function showImage(element) {
+            let largeImage = document.getElementById("largeImage");
+            largeImage.src = element.src;
+        }
+    </script>
     <script src="../../StoigelaPages/Dropdown.js"></script>
 </body>
 <script src="../SearchPages.js"></script>

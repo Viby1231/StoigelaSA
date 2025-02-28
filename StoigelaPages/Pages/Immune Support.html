@@ -24,6 +24,47 @@
     color: black;
 }
 
+.photo-gallery {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #66cc5c;    background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.gallery-thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-preview {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-preview img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
         @font-face {
             font-family: 'Neuropol';
             /* Name your font family */
@@ -269,6 +310,28 @@
             align-content: center;
         }
 
+        .shop-button {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-decoration: 0;
+        }
+        
+        .shop-button button {
+            background-color: #3BAF3E;
+            width: 200px;
+            height: 60px;
+            border: 0;
+            border-radius: 20px;
+            color: #f0f0f0;
+            font-size: 25px;
+        }
+
+        .shop-button button:hover {
+            background-color: #66cc5c;
+
+        }
         .top-of-page-title h1 {
             line-height: 10px;
             font-family: "Syne";
@@ -466,6 +529,19 @@
                     All of these properties may contribute to promoting the reinforcement of the body’s natural immune
                     system.
                 </p>
+                <a class="shop-button" href="shop.html"><button >Shop Now</button></a>
+            </div>
+            
+        </div>
+        <div class="photo-gallery">
+            <div class="gallery-thumbnails">
+                <img src="../../Images/Zoilevium-Immune-Support-Bottle.jpg" alt="Image 1" onclick="showImage(this)">
+                <img src="../../Images/Zoilevium-Immune-Support-Bottle-Bumped-Over.jpg" alt="Image 2" onclick="showImage(this)">
+                <img src="../../Images/Immune Support Showcase.jpg" alt="Image 3" onclick="showImage(this)">
+                <img src="../../Images/Immune Support Use.jpg" alt="Image 4" onclick="showImage(this)">
+            </div>
+            <div class="gallery-preview">
+                <img id="largeImage" src="../../Images/Zoilevium-Immune-Support-Bottle.jpg" alt="Large Preview">
             </div>
         </div>
     </div>
@@ -533,7 +609,7 @@
         <div class="footer ">
             <div class="footer-img">
                 <img src="../../Images/Stoigela Logo.jpg" height="200px" width="150px" class="bi m-5"
-                    alt="Stoigela Logo">
+                alt="Stoigela Logo">
             </div>
             <div>
                 <h4>Pages:</h4>
@@ -574,6 +650,12 @@
         </div>
 
     </footer>
+                <script>
+                    function showImage(element) {
+                        let largeImage = document.getElementById("largeImage");
+                        largeImage.src = element.src;
+                    }
+                </script>
     <script src="../SearchPages.js"></script>
     <script src="../../StoigelaPages/Dropdown.js"></script>
 </body>
