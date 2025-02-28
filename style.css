@@ -377,12 +377,12 @@ p {
         height: 359px;
         object-fit: cover;
         opacity: 0;
-        animation: switchImages 30s infinite;
+        animation: switchImages 20s infinite;
     }
 
     .slider img:nth-child(1) { animation-delay: 0s; }
-    .slider img:nth-child(2) { animation-delay: 10s; }
-    .slider img:nth-child(3) { animation-delay: 20s; }
+    .slider img:nth-child(2) { animation-delay: 6.5s; }
+    .slider img:nth-child(3) { animation-delay: 13s; }
 
     @keyframes switchImages {
         0% { opacity: 0; }
