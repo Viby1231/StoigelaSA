@@ -75,21 +75,41 @@ function highlightContentPreview(content, query) {
     return content.slice(startIndex, endIndex).replace(regex, (match) => `<span class="highlight">${match}</span>`) + '...';
 }
 
-// Function to handle scrolling to the matched content on the target page
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('searchQuery');
-    const matchID = window.location.hash.substr(1); // Get the matched result ID
+// Function to scroll to and highlight the searched word when the page loads
+function scrollToSearchQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get("searchQuery");
 
-    if (query && matchID) {
-        // Wait for the page to load before scrolling
-        setTimeout(() => {
-            const matchElement = document.getElementById(matchID);
-            if (matchElement) {
-                matchElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                matchElement.style.backgroundColor = 'yellow'; // Highlight the match
-                setTimeout(() => matchElement.style.backgroundColor = '', 2000); // Remove highlight after 2 seconds
+    if (searchQuery) {
+        const regex = new RegExp(searchQuery, "gi");
+        const elements = document.body.getElementsByTagName('*');
+        for (let element of elements) {
+            if (element.textContent.match(regex)) {
+                element.innerHTML = element.innerHTML.replace(regex, (match) => `<span class="highlight">${match}</span>`);
+                element.scrollIntoView({ behavior: "smooth", block: "center" });
+                break;
             }
-        }, 100);
+        }
     }
-};
+}
+
+// Function to inject CSS for highlighting
+function injectHighlightCSS() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .highlight {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Call the functions on page load
+document.addEventListener("DOMContentLoaded", () => {
+    injectHighlightCSS();
+    scrollToSearchQuery();
+});
