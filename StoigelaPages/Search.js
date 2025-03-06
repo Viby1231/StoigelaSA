@@ -1,4 +1,4 @@
-// This function will fetch the search data from the JSON file and search it
+// Function to fetch the search data from the JSON file and search it
 async function fetchSearchData() {
     try {
         const response = await fetch('search-data.json');
@@ -12,7 +12,7 @@ async function fetchSearchData() {
     }
 }
 
-// Function to search the fetched data
+// Function to handle the search functionality
 async function searchWebsite() {
     const query = document.getElementById('search-box').value.toLowerCase();
     const resultsDiv = document.getElementById('search-results');
@@ -36,21 +36,18 @@ async function searchWebsite() {
     foundMatches = foundMatches.slice(0, MAX_RESULTS);
 
     if (foundMatches.length > 0) {
-        foundMatches.forEach((item, index) => {
+        foundMatches.forEach((item) => {
             const resultDiv = document.createElement('div');
             resultDiv.classList.add('result');
 
-            // Highlight matches in the title and content
+            // Highlight the title and content preview
             const highlightedTitle = highlightText(item.title || 'Untitled', query);
-            const highlightedContent = highlightPreview(item.content || '', query);
+            const highlightedContent = highlightContentPreview(item.content || '', query);
 
-            // Create a unique ID for each result (can be used to scroll to the element later)
-            const resultID = 'result-' + index;
-
-            // Create links to navigate to the specific page with the query
+            // Create a link to navigate to the page with query parameter
             resultDiv.innerHTML = `
-                <a href="${item.url}?searchQuery=${query}#${resultID}" target="_blank">${highlightedTitle}</a>
-                <p id="${resultID}">${highlightedContent}</p>
+                <a href="${item.url}?searchQuery=${encodeURIComponent(query)}">${highlightedTitle}</a>
+                <p>${highlightedContent}</p>
             `;
             resultsDiv.appendChild(resultDiv);
         });
@@ -61,51 +58,59 @@ async function searchWebsite() {
 
 // Function to highlight the search query in the text
 function highlightText(text, query) {
-    // Escape the query to handle special characters in regex
     const escapedQuery = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     const regex = new RegExp(escapedQuery, 'gi');
-    
-    // Replace matched text with a <span> for styling
-    return text.replace(regex, (match) => {
-        return `<span class="highlight">${match}</span>`;
-    });
+    return text.replace(regex, (match) => `<span class="highlight">${match}</span>`);
 }
 
 // Function to create a preview of the content with highlighted matches
-function highlightPreview(content, query) {
-    // Escape the query to handle special characters in regex
+function highlightContentPreview(content, query) {
     const escapedQuery = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     const regex = new RegExp(escapedQuery, 'gi');
-
-    // Search for matches in the content
     const match = regex.exec(content);
-    if (!match) return content.slice(0, 200) + '...'; // Return preview of the first 200 characters if no match
-
-    // Get a preview of the surrounding context and highlight the match
-    const startIndex = Math.max(match.index - 50, 0);  // Get 50 characters before the match
-    const endIndex = Math.min(match.index + match[0].length + 50, content.length);  // Get 50 characters after the match
-
-    // Return the content preview with highlighted match
-    return content.slice(startIndex, endIndex).replace(regex, (match) => {
-        return `<span class="highlight">${match}</span>`;
-    }) + '...';  // Add ellipsis at the end
+    if (!match) return content.slice(0, 200) + '...';
+    
+    const startIndex = Math.max(match.index - 50, 0);
+    const endIndex = Math.min(match.index + match[0].length + 50, content.length);
+    return content.slice(startIndex, endIndex).replace(regex, (match) => `<span class="highlight">${match}</span>`) + '...';
 }
 
-// Function to handle scrolling to the matched content on the target page
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('searchQuery');
-    const matchID = window.location.hash.substr(1); // Get the matched result ID
+// Function to scroll to and highlight the searched word when the page loads
+function scrollToSearchQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get("searchQuery");
 
-    if (query && matchID) {
-        // Wait for the page to load before scrolling
-        setTimeout(() => {
-            const matchElement = document.getElementById(matchID);
-            if (matchElement) {
-                matchElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                matchElement.style.backgroundColor = 'yellow'; // Highlight the match
-                setTimeout(() => matchElement.style.backgroundColor = '', 2000); // Remove highlight after 2 seconds
+    if (searchQuery) {
+        const regex = new RegExp(searchQuery, "gi");
+        const elements = document.body.getElementsByTagName('*');
+        for (let element of elements) {
+            if (element.textContent.match(regex)) {
+                element.innerHTML = element.innerHTML.replace(regex, (match) => `<span class="highlight">${match}</span>`);
+                element.scrollIntoView({ behavior: "smooth", block: "center" });
+                break;
             }
-        }, 100);
+        }
     }
-};
+}
+
+// Function to inject CSS for highlighting
+function injectHighlightCSS() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .highlight {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Call the functions on page load
+document.addEventListener("DOMContentLoaded", () => {
+    injectHighlightCSS();
+    scrollToSearchQuery();
+});
+

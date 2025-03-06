@@ -365,7 +365,10 @@ p {
         grid-template-rows: 1fr ;
     }
 
-
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
     .slider {
         position: relative;
     }
