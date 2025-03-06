@@ -64,21 +64,52 @@ function highlightText(text, query) {
 }
 
 // Function to create a preview of the content with highlighted matches
-function highlightPreview(content, query) {
-  // Escape the query to handle special characters in regex
-  const escapedQuery = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-  const regex = new RegExp(escapedQuery, 'gi');
-
-  // Search for matches in the content
-  const match = regex.exec(content);
-  if (!match) return content.slice(0, 200) + '...'; // Return preview of the first 200 characters if no match
-
-  // Get a preview of the surrounding context and highlight the match
-  const startIndex = Math.max(match.index - 50, 0);  // Get 50 characters before the match
-  const endIndex = Math.min(match.index + match[0].length + 50, content.length);  // Get 50 characters after the match
-
-  // Return the content preview with highlighted match
-  return content.slice(startIndex, endIndex).replace(regex, (match) => {
-      return `<span class="highlight">${match}</span>`;
-  }) + '...';  // Add ellipsis at the end
+function highlightContentPreview(content, query) {
+    const escapedQuery = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+    const regex = new RegExp(escapedQuery, 'gi');
+    const match = regex.exec(content);
+    if (!match) return content.slice(0, 200) + '...';
+    
+    const startIndex = Math.max(match.index - 50, 0);
+    const endIndex = Math.min(match.index + match[0].length + 50, content.length);
+    return content.slice(startIndex, endIndex).replace(regex, (match) => `<span class="highlight">${match}</span>`) + '...';
 }
+
+// Function to scroll to and highlight the searched word when the page loads
+function scrollToSearchQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get("searchQuery");
+
+    if (searchQuery) {
+        const regex = new RegExp(searchQuery, "gi");
+        const elements = document.body.getElementsByTagName('*');
+        for (let element of elements) {
+            if (element.textContent.match(regex)) {
+                element.innerHTML = element.innerHTML.replace(regex, (match) => `<span class="highlight">${match}</span>`);
+                element.scrollIntoView({ behavior: "smooth", block: "center" });
+                break;
+            }
+        }
+    }
+}
+
+// Function to inject CSS for highlighting
+function injectHighlightCSS() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .highlight {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 3px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Call the functions on page load
+document.addEventListener("DOMContentLoaded", () => {
+    injectHighlightCSS();
+    scrollToSearchQuery();
+});
